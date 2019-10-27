@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+
+<main>  
+  <%= render "pages/partials/navi" %>
+  <%= render "pages/partials/preloader" %>
+  <%= render "pages/partials/top" %>
+  <% render "pages/partials/about" %>
+  <% render "pages/partials/video" %>
+  <% render "pages/partials/why" %>
+  <%= render "pages/partials/count" %>
+  <% render "pages/partials/services" %>
+  <%= render "pages/partials/performance" %>
+  <% render "pages/partials/how" %>
+  <% render "pages/partials/start" %>  
+  <% render "pages/partials/projects" %>
+  <% render "pages/partials/more" %>
+  <% render "pages/partials/team" %>
+  <% render "pages/partials/price" %>
+  <%= render "pages/partials/contact" %>
+  <%= render "pages/partials/bottom" %>
+</main>  
+  <%= render "pages/partials/footer" %>
+  <%= render "pages/partials/totop" %>
+<p>
+  <strong>Name:</strong>
+  <%= @page.name %>
+</p>
+
+<%= link_to 'Edit', edit_page_path(@page) %> |
+<%= link_to 'Back', pages_path %>
