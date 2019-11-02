@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_action :set_page, only: [:show, :edit, :update, :destroy]
+  before_action :set_page, only: [:show, :edit, :update, :destroy, :edit_count]
 
   # GET /pages
   # GET /pages.json
@@ -45,7 +45,8 @@ class PagesController < ApplicationController
         format.html { redirect_to @page, notice: 'Page was successfully updated.' }
         format.json { render :show, status: :ok, location: @page }
       else
-        format.html { render :edit }
+        flash[:danger] = @page.errors.full_messages.to_sentence
+        format.html { redirect_back(fallback_location: root_path) }
         format.json { render json: @page.errors, status: :unprocessable_entity }
       end
     end
@@ -61,6 +62,12 @@ class PagesController < ApplicationController
     end
   end
 
+
+  def edit_count
+
+  end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_page
@@ -69,6 +76,14 @@ class PagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def page_params
-      params.require(:page).permit(:name)
+      params.require(:page).permit(:name, :count_text1,
+      :count_text2,
+      :count_text3,
+      :count_text4,
+      :count_text5,
+      :count_text6,
+      :count_num1,
+      :count_num2,
+      :count_num3)
     end
 end

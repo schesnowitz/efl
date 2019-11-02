@@ -31,16 +31,16 @@ web.main:
     - public/uploads
 
 
-  log_watch:
-    rails: 'log/production.log'
+#   log_watch:
+#     rails: 'log/production.log'
 
 worker.sidekiq:
   start: sidekiq # if your app uses mailers we need to start them up, comment out this line and use ...
   
   # start: bundle exec sidekiq -q default -q mailers -C /app/config/sidekiq.rb
 
-  log_watch:
-    sidekiq: 'log/production.log'
+  # log_watch:
+  #   sidekiq: 'log/production.log'
 
   writable_dirs:
     - tmp
