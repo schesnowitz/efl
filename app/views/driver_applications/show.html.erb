@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @driver_application.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @driver_application.last_name %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @driver_application.dob %>
+</p>
+
+<p>
+  <strong>Social:</strong>
+  <%= @driver_application.social %>
+</p>
+
+<p>
+  <strong>Street:</strong>
+  <%= @driver_application.street %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @driver_application.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @driver_application.state %>
+</p>
+
+<p>
+  <strong>Postal:</strong>
+  <%= @driver_application.postal %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @driver_application.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @driver_application.email %>
+</p>
+
+<%= link_to 'Edit', edit_driver_application_path(@driver_application) %> |
+<%= link_to 'Back', driver_applications_path %>

@@ -1,0 +1,49 @@
+<%= simple_form_for(@driver_application) do |f| %>
+<%= f.error_notification %>
+<%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+<div class="form-inputs">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Personal Information</h3>
+      <%= f.input :first_name %>
+      <%= f.input :last_name %>
+      <%= f.input :dob, start_year: Date.today.year - 75, end_year: Date.today.year - 23, label: "Date of Birth", prompt: "Make a selection" %>
+      <%= f.input :social, label: "Social Security Number" %>
+    </div>
+    <div class="col-sm-4">
+      <h3>Address</h3>
+      <%= f.input :street %>
+      <%= f.input :city %>
+      <%= f.input :state, collection: ApplicationRecord::StateProvence, include_blank: "Select State | Provence" %>
+      <%= f.input :postal %>
+    </div>
+    <div class="col-sm-4">
+      <h3>Contact</h3>
+      <%= f.input :phone %>
+      <%= f.input :email %>
+      <h3>License Information</h3>
+      <%= f.input :license_number %>
+      <%= f.input :license_image, as: :file %>
+      <%= f.input :years_experience, input_html: { min: '0', step: 'any' }, label: "Years of experience" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <h3> Tractor Information</h3>
+      <%= f.input :year, discard_day: true, discard_month: true, start_year: Date.today.year - 20, end_year: Date.today.year + 1, prompt: "Select Year" %>
+      <%= f.input :make %>
+      <%= f.input :model %>
+      <%= f.input :color %>
+      <%= f.input :vin %>
+      <%= f.input :mileage %>
+    </div>
+    <div class="col-sm-8">
+      <h3>Extra Information</h3>
+      <%= f.input :notes %>
+    </div>
+  </div>
+</div>
+<div class="form-actions">
+  <%= f.submit "Send Info", class: "btn btn-info", 'data-disable-with' => "Sending Data.." %>
+</div>
+<% end %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :driver_applications
   resources :pages
   root to: 'pages#show' 
 
