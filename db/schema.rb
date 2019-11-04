@@ -70,6 +70,11 @@ ActiveRecord::Schema.define(version: 2019_11_03_083115) do
     t.string "top_text2"
     t.string "top_text3"
     t.string "top_text4"
+    t.string "foot_text1"
+    t.string "foot_text2"
+    t.string "foot_text3"
+    t.string "foot_text4"
+    t.string "foot_text5"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

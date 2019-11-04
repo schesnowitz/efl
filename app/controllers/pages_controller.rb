@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_action :set_page, only: [:show, :edit, :update, :destroy, :edit_count, :edit_performance, :edit_top, :edit_foot]
+  before_action :set_page, only: [:show, :edit, :update, :destroy, :edit_count, :edit_performance, :edit_top, :edit_footer]
 
   # GET /pages
   # GET /pages.json
@@ -73,7 +73,7 @@ class PagesController < ApplicationController
   def edit_top
   end
 
-  def edit_foot
+  def edit_footer
   end
 
 
@@ -122,6 +122,11 @@ class PagesController < ApplicationController
                                   :top_text2,
                                   :top_text3,
                                   :top_text4,
+                                  :foot_text1,
+                                  :foot_text2,
+                                  :foot_text3,
+                                  :foot_text4,
+                                  :foot_text5 
                                   )
     end
 end

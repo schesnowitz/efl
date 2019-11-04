@@ -3,13 +3,14 @@
       <div class="container">
         <div class="row justify-content-between">
           <div class="col-12 col-md-auto mb-1 mb-md-0">
-            <p class="mb-0">text &copy; Copyright <%= Time.now.strftime("%Y")%><span class="mx-2">|</span><span class="text-900 hover-color-white">
-                text</span></p>
+            <p class="mb-0"><%= @page.foot_text1 %> &copy; Copyright <%= Time.now.strftime("%Y")%><span class="mx-2">|</span><span class="text-900 hover-color-white">
+                <%= @page.foot_text2 %></span></p>
           </div>
           <div class="col-12 col-md-auto">
-            <p class="mb-0">Made with<span class="fa fa-heart mx-2"></span>by <a class="text-800 hover-color-white" href="#!">text</a></p>
+            <p class="mb-0"><%= @page.foot_text3 %><span class="fa fa-heart mx-2"></span><%= @page.foot_text4 %> <a class="text-800 hover-color-white" href="#!"><%= @page.foot_text5 %></a></p>
           </div>
         </div>
+          <%= link_to "Edit", edit_footer_path, class: "btn btn-outline-info btn-lg pull-right" %> 
       </div>
 
       

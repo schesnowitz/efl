@@ -34,6 +34,11 @@ class CreatePages < ActiveRecord::Migration[5.2]
       t.string :top_text2
       t.string :top_text3
       t.string :top_text4      
+      t.string :foot_text1
+      t.string :foot_text2
+      t.string :foot_text3
+      t.string :foot_text4 
+      t.string :foot_text5  
       t.timestamps
     end
   end
