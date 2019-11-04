@@ -1,4 +1,7 @@
+<div class="overflow-hidden">
 <%= render 'pages/edit_partials/edit_count' %>  
+</div>
+
 <div class='container'>
 
 <%= simple_form_for(@page) do |f| %>
@@ -11,6 +14,14 @@
 <%= f.input :count_num1, label: "Number 1", hint: "Only Numerical Values"  %>
 <%= f.input :count_num2, label: "Number 2", hint: "Only Numerical Values" %>
 <%= f.input :count_num3, label: "Number 1", hint: "Only Numerical Values" %> 
+<%= f.input :image, label: "Image", hint: "Image size 3000 x 811 px"   %>
+<div class='container'>
+  <%= image_tag(@page.thumbnail1)  %>
+</div>
+<br>
+<br>
+
+
   <div class="form-actions">
     <%= f.button :submit, data: {disable_with: 'One moment please...'} %> 
     | <%= link_to "Home", root_path, class: "btn btn-default" %> 

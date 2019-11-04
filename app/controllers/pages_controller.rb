@@ -42,7 +42,8 @@ class PagesController < ApplicationController
   def update
     respond_to do |format|
       if @page.update(page_params)
-        format.html { redirect_to @page, notice: 'Page was successfully updated.' }
+        flash[:success] = "Page Updated"
+        format.html { redirect_back(fallback_location: root_path) }
         format.json { render :show, status: :ok, location: @page }
       else
         flash[:danger] = @page.errors.full_messages.to_sentence
@@ -76,14 +77,28 @@ class PagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def page_params
-      params.require(:page).permit(:name, :count_text1,
-      :count_text2,
-      :count_text3,
-      :count_text4,
-      :count_text5,
-      :count_text6,
-      :count_num1,
-      :count_num2,
-      :count_num3)
+      params.require(:page).permit(
+                                  :name, 
+                                  :image,
+                                  :image1,
+                                  :image2,
+                                  :image3,
+                                  :image4,
+                                  :image5,
+                                  :image6,
+                                  :image7,
+                                  :image8,
+                                  :image9,
+                                  :image10,
+                                  :count_text1,
+                                  :count_text2,
+                                  :count_text3,
+                                  :count_text4,
+                                  :count_text5,
+                                  :count_text6,
+                                  :count_num1,
+                                  :count_num2,
+                                  :count_num3
+                                  )
     end
 end
