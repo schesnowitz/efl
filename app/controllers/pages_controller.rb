@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_action :set_page, only: [:show, :edit, :update, :destroy, :edit_count]
+  before_action :set_page, only: [:show, :edit, :update, :destroy, :edit_count, :edit_performance]
 
   # GET /pages
   # GET /pages.json
@@ -65,7 +65,9 @@ class PagesController < ApplicationController
 
 
   def edit_count
+  end
 
+  def edit_performance
   end
 
 
@@ -79,17 +81,7 @@ class PagesController < ApplicationController
     def page_params
       params.require(:page).permit(
                                   :name, 
-                                  :image,
-                                  :image1,
-                                  :image2,
-                                  :image3,
-                                  :image4,
-                                  :image5,
-                                  :image6,
-                                  :image7,
-                                  :image8,
-                                  :image9,
-                                  :image10,
+                                  :count_image,
                                   :count_text1,
                                   :count_text2,
                                   :count_text3,
@@ -98,7 +90,28 @@ class PagesController < ApplicationController
                                   :count_text6,
                                   :count_num1,
                                   :count_num2,
-                                  :count_num3
+                                  :count_num3,
+                                  :performance_image,
+                                  :performance_text1,
+                                  :performance_text2,
+                                  :performance_text3,
+                                  :performance_text4,
+                                  :performance_text5,
+                                  :performance_text6,
+                                  :performance_text7,
+                                  :performance_text8,
+                                  :performance_text9,
+                                  :performance_text10,
+                                  :performance_text11,
+                                  :performance_text12,
+                                  :performance_text13,
+                                  :performance_text14,
+                                  :performance_text15,
+                                  :performance_num1,
+                                  :performance_num2,
+                                  :performance_num3,
+                                  :performance_num4
                                   )
     end
 end
+

@@ -14,9 +14,9 @@
 <%= f.input :count_num1, label: "Number 1", hint: "Only Numerical Values"  %>
 <%= f.input :count_num2, label: "Number 2", hint: "Only Numerical Values" %>
 <%= f.input :count_num3, label: "Number 1", hint: "Only Numerical Values" %> 
-<%= f.input :image, label: "Image", hint: "Image size 3000 x 811 px"   %>
+<%= f.input :count_image, label: "Image", hint: "For best results image size should be 3000 x 811 px"   %>
 <div class='container'>
-  <%= image_tag(@page.thumbnail1)  %>
+  <%= image_tag(@page.count_nail) if @page.count_image.attached? %>
 </div>
 <br>
 <br>
@@ -26,6 +26,7 @@
     <%= f.button :submit, data: {disable_with: 'One moment please...'} %> 
     | <%= link_to "Home", root_path, class: "btn btn-default" %> 
   </div>
+  <br>
 <% end %>
 </div>
 <%= render "pages/partials/footer" %>

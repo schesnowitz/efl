@@ -1,0 +1,46 @@
+<div class="overflow-hidden">
+  <%= render 'pages/edit_partials/edit_performance' %>  
+</div>
+<div class='container'>
+  <%= simple_form_for(@page) do |f| %>
+  <%= f.input :performance_text1, label: "Text 1" %>
+  <%= f.input :performance_text2, label: "Text 2"  %>
+  <%= f.input :performance_text3, label: "Text 3"  %>
+  <%= f.input :performance_text4, label: "Text 4"  %>
+  <%= f.input :performance_text5, label: "Text 5"  %>
+  <%= f.input :performance_text6, label: "Text 6" %>
+  <%= f.input :performance_text7, label: "Text 7"  %>
+  <%= f.input :performance_text8, label: "Text 8"  %>
+  <%= f.input :performance_text9, label: "Text 9"  %>
+  <%= f.input :performance_text10, label: "Text 10"  %>
+  <%= f.input :performance_text11, label: "Text 11" %>
+  <%= f.input :performance_text12, label: "Text 12"  %>
+  <%= f.input :performance_text13, label: "Text 13"  %>
+  <div class="row">
+    <div class="col-sm">
+      <%= f.input :performance_num1, input_html: { min: '0', max: '100' }, label: "Percentage 1", hint: "Only numerical values between 0 and 100"  %>
+    </div>
+    <div class="col-sm">
+      <%= f.input :performance_num2, input_html: { min: '0', max: '100' }, label: "Percentage 2", hint: "Only numerical values between 0 and 100" %>
+    </div>
+    <div class="col-sm">
+      <%= f.input :performance_num3, input_html: { min: '0', max: '100' }, label: "Percentage 1", hint: "Only numerical values between 0 and 100" %> 
+    </div>
+    <div class="col-sm">
+      <%= f.input :performance_num4, input_html: { min: '0', max: '100' }, label: "Percentage 1", hint: "Only numerical values between 0 and 100" %> 
+    </div>
+  </div>
+  <%= f.input :performance_image, label: "Image", hint: "For best results image size should be 3000 x 882 px"   %>
+  <div class='container'>
+    <%= image_tag(@page.performance_nail) if @page.performance_image.attached? %>
+  </div>
+  <br>
+  <br>
+  <div class="form-actions">
+    <%= f.button :submit, data: {disable_with: 'One moment please...'} %> 
+    | <%= link_to "Home", root_path, class: "btn btn-default" %> 
+  </div>
+  <br>
+  <% end %>
+</div>
+<%= render "pages/partials/footer" %>
