@@ -30,6 +30,10 @@ class CreatePages < ActiveRecord::Migration[5.2]
       t.integer :performance_num2
       t.integer :performance_num3
       t.integer :performance_num4
+      t.string :top_text1
+      t.string :top_text2
+      t.string :top_text3
+      t.string :top_text4      
       t.timestamps
     end
   end

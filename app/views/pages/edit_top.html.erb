@@ -1,0 +1,30 @@
+<div class="overflow-hidden">
+<%= render 'pages/edit_partials/edit_top' %>  
+</div>
+
+<div class='container'>
+
+<%= simple_form_for(@page) do |f| %>
+<%= f.input :top_text1, label: "Text 1" %>
+<%= f.input :top_text2, label: "Text 2"  %>
+<%= f.input :top_text3, label: "Text 3"  %>
+<%= f.input :top_text4, label: "Text 4"  %>
+
+
+
+<%= f.input :top_image, label: "Image", hint: "For best results image size should be 3000 x 2000 px"   %>
+<div class='container'>
+  <%= image_tag(@page.top_nail) if @page.top_image.attached? %>
+</div>
+<br>
+<br>
+
+
+  <div class="form-actions">
+    <%= f.button :submit, data: {disable_with: 'One moment please...'} %> 
+    | <%= link_to "Home", root_path, class: "btn btn-default" %> 
+  </div>
+  <br>
+<% end %>
+</div>
+<%= render "pages/partials/footer" %>

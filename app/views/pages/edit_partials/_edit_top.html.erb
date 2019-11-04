@@ -1,11 +1,10 @@
 
 
-
       <section class="text-center overflow-hidden py-0" id="top" data-zanim-timeline="{}" data-zanim-trigger="scroll">
 
         <div class="bg-holder overlay overlay-2 parallax" style="background-image" data-rellax-percentage="0.5">
         <%= image_tag(@page.three_two) if @page.top_image.attached? %>
-        </div> 
+        </div>
         <!--/.bg-holder-->
 
         <div class="header-overlay"></div>
@@ -22,6 +21,10 @@
             </div>
           </div>
           <div class="header-indicator-down"><a class="indicator indicator-down opacity-75" href="#about-us" data-fancyscroll="data-fancyscroll" data-offset="64"><span class="indicator-arrow indicator-arrow-one" data-zanim-xs='{"from":{"opacity":0,"y":30},"to":{"opacity":1,"y":0},"ease":"Back.easeOut","duration":1,"delay":1.5}'></span></a></div>
-                        <%= link_to "Edit", edit_top_path, class: "btn btn-outline-info btn-lg pull-right" %> 
         </div>
       </section>
+<script>
+  if (window.location.href.indexOf('reload')==-1) {
+       window.location.replace(window.location.href+'?reload');
+  }
+</script>

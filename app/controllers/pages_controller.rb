@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_action :set_page, only: [:show, :edit, :update, :destroy, :edit_count, :edit_performance]
+  before_action :set_page, only: [:show, :edit, :update, :destroy, :edit_count, :edit_performance, :edit_top, :edit_foot]
 
   # GET /pages
   # GET /pages.json
@@ -70,6 +70,12 @@ class PagesController < ApplicationController
   def edit_performance
   end
 
+  def edit_top
+  end
+
+  def edit_foot
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -110,7 +116,12 @@ class PagesController < ApplicationController
                                   :performance_num1,
                                   :performance_num2,
                                   :performance_num3,
-                                  :performance_num4
+                                  :performance_num4,
+                                  :top_image,
+                                  :top_text1,
+                                  :top_text2,
+                                  :top_text3,
+                                  :top_text4,
                                   )
     end
 end

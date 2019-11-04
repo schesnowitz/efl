@@ -66,6 +66,10 @@ ActiveRecord::Schema.define(version: 2019_11_03_083115) do
     t.integer "performance_num2"
     t.integer "performance_num3"
     t.integer "performance_num4"
+    t.string "top_text1"
+    t.string "top_text2"
+    t.string "top_text3"
+    t.string "top_text4"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
