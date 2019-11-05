@@ -76,3 +76,4 @@ Rails.application.configure do
 
   }
 end
+# smtp.livemail.co.uk

@@ -28,6 +28,7 @@ class DriverApplicationsController < ApplicationController
 
     respond_to do |format|
       if @driver_application.save
+        DriverApplicationMailer.driver_application(@driver_application).deliver_now
         format.html { redirect_to root_path, notice: 'Driver application was successfully sent, we will be in touch soon.' }
         format.json { render :show, status: :created, location: @driver_application }
       else

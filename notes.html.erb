@@ -1,0 +1,8 @@
+app = DriverApplication.last
+
+mail = DriverApplicationMailer.driver_application(app)
+
+mail.deliver_now
+
+EDITOR=vim rails credentials:edit
+
