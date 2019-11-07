@@ -2,8 +2,8 @@
 require 'faker'
 
 page = Page.create!(
-  mailer_send_to_email1: "s.chesnowitz@gmail.com",
-  mailer_send_to_email2: "s.chesnowitz@gmail.com",
+  mailer_send_to_email1: "info@eaglefreightlines.com",
+  mailer_send_to_email2: "info@eaglefreightlines.com", 
   name: Faker::TvShows::Simpsons.character, 
   count_text1: Faker::Company.industry,
   count_text2: Faker::Company.industry,
