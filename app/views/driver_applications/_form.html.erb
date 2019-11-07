@@ -27,47 +27,37 @@
       <%= f.input :years_experience, input_html: { min: '0', step: 'any' }, label: "Years of experience" %>
     </div>
   </div>
-
-<hr>
-      <h3> Owner Operators</h3>
-      <h5> Tractor Info</h5>
-<div class="container">
-  <div class="row">
-    <div class="col-sm">
-          <%= f.input :year, discard_day: true, discard_month: true, start_year: Date.today.year - 20, end_year: Date.today.year + 1, prompt: "Select Year" %>
-    </div>
-    <div class="col-sm">
-      <%= f.input :make %>
-    </div>
-    <div class="col-sm">
-           <%= f.input :model %>
-
-    </div>
-        <div class="col-sm">
-      <%= f.input :color %>
-
-    </div>
-        <div class="col-sm">
-      <%= f.input :vin %>
-
-    </div>
-        <div class="col-sm">
-          <%= f.input :mileage %>
+  <hr>
+  <h3> Owner Operators</h3>
+  <h5> Tractor Info</h5>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <%= f.input :year, discard_day: true, discard_month: true, start_year: Date.today.year - 20, end_year: Date.today.year + 1, prompt: "Select Year" %>
+      </div>
+      <div class="col-sm">
+        <%= f.input :make %>
+      </div>
+      <div class="col-sm">
+        <%= f.input :model %>
+      </div>
+      <div class="col-sm">
+        <%= f.input :color %>
+      </div>
+      <div class="col-sm">
+        <%= f.input :vin %>
+      </div>
+      <div class="col-sm">
+        <%= f.input :mileage %>
+        <%= f.input :cab_card %>
+      </div>
     </div>
   </div>
-</div>
-<br>
-      <h5>Extra Information</h5>
-      <%= f.input :notes, placeholder: "Any extra info you wanna pass along?", label: false %>
-
-
-
-
-
-
-  
-<div class="form-actions">
-  <%= f.submit "Send Info", class: "btn btn-info", 'data-disable-with' => "Sending Data..." %>
-</div>
+  <br>
+  <h5>Extra Information</h5>
+  <%= f.input :notes, placeholder: "Any extra info you wanna pass along?", label: false %>
+  <div class="form-actions">
+    <%= f.submit "Send Info", class: "btn btn-info", 'data-disable-with' => "Sending Data..." %>
+  </div>
 </div>
 <% end %>

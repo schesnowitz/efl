@@ -1,3 +1,6 @@
+<%= render "pages/partials/navi" %>
+<%= render "layouts/spacer" %>
+<div class="container">
 <p id="notice"><%= notice %></p>
 
 <h1>Driver Applications</h1>
@@ -40,6 +43,11 @@
   </tbody>
 </table>
 
-<br>
+
 
 <%= link_to 'New Driver Application', new_driver_application_path %>
+</div>
+<br>
+<br>
+<br>
+<%= render "pages/edit_partials/edit_footer_while_in_edit_mode" %>

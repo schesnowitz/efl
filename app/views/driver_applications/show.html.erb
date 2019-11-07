@@ -1,59 +1,96 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>First name:</strong>
-  <%= @driver_application.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @driver_application.last_name %>
-</p>
-
-<p>
-  <strong>Dob:</strong>
-  <%= @driver_application.dob %>
-</p>
-
-<p>
-  <strong>Social:</strong>
-  <%= @driver_application.social %>
-</p>
-
-<p>
-  <strong>Street:</strong>
-  <%= @driver_application.street %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @driver_application.city %>
-</p>
-
-<p>
-  <strong>State:</strong>
-  <%= @driver_application.state %>
-</p>
-
-<p>
-  <strong>Postal:</strong>
-  <%= @driver_application.postal %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @driver_application.phone %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @driver_application.email %>
-</p>
-
-
-<p>
-  <strong>Email:</strong>
-  <%= image_tag(@driver_application.license_image) %>
-</p>
-<%= link_to 'Edit', edit_driver_application_path(@driver_application) %> |
-<%= link_to 'Back', driver_applications_path %>
+<%= render "pages/partials/navi" %>
+<%= render "layouts/spacer" %>
+<br><br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h4>Driver Information</h4>
+      <strong>Name: </strong>
+      <%= @driver_application.first_name %>
+      <%= @driver_application.last_name %>
+      <br>
+      <strong>Date of birth: </strong>
+      <%= @driver_application.dob.strftime( "%d/%m/%Y") if @driver_application.dob.present? %>
+      <br>
+      <strong>Social: </strong>
+      <%= @driver_application.social %>
+    </div>
+    <div class="col-sm-4">
+      <strong>Street: </strong>
+      <%= @driver_application.street %>
+      <br>
+      <strong>City/State: </strong>
+      <%= @driver_application.city %>, 
+      <%= @driver_application.state %>
+      <br>
+      <strong>Postal Code: </strong>
+      <%= @driver_application.postal %>
+      <br>
+      <strong>Telephone: </strong>
+      <%= @driver_application.phone %>
+      <br>
+      <strong>Email: </strong>
+      <%= @driver_application.email %>
+    </div>
+    <div class="col-sm">
+      <strong>License #: </strong>
+      <%= @driver_application.license_number %>
+      <br>
+      <strong>Years of experience: </strong>
+      <%= @driver_application.years_experience  %>
+      <br>
+      <strong>License image: </strong>
+      <% if @driver_application.license_image.attached? %>
+      <%= link_to "View License", @driver_application.license_image, target: :_blank if @driver_application.license_image.attached? %>
+      <%= link_to "Download License", @driver_application.license_image, download: ''  if @driver_application.license_image.attached?%>
+      <% else %>
+      No License submitted.
+      <% end %>
+      <br>
+    </div>
+  </div>
+  <hr>
+  <h3> Owner Operators</h3>
+  <h5> Tractor Info</h5>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <%= @driver_application.year.strftime( "%Y") %>
+      </div>
+      <div class="col-sm">
+        <strong>Make: </strong>
+        <%= @driver_application.make %>
+      </div>
+      <div class="col-sm">
+        <strong>Model: </strong>
+        <%= @driver_application.model %>
+      </div>
+      <div class="col-sm">
+        <strong>Color: </strong>
+        <%= @driver_application.color %>
+      </div>
+      <div class="col-sm">
+        <strong>Vin: </strong>
+        <%= @driver_application.vin %>
+      </div>
+      <div class="col-sm">
+        <strong>Milage: </strong>
+        <%= @driver_application.mileage %>
+      </div>
+    </div>
+  </div>
+  <strong>Cab Card: </strong><br>
+  <% if @driver_application.cab_card.attached? %>
+  <%= link_to "View Cab Card", @driver_application.cab_card, target: :_blank if @driver_application.cab_card.attached? %>
+  <%= link_to "Download Cab Card", @driver_application.cab_card, download: ''  if @driver_application.cab_card.attached?%>
+  <% else %>
+  No Cab Card submitted.
+  <% end %>
+  <br>
+  <h4>Extra Information</h4>
+  <% if @driver_application.notes.present? %>
+  <%= @driver_application.notes %>
+  <% else %>
+  No info submitted
+  <% end %>
+</div>

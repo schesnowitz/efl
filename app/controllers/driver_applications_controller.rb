@@ -1,6 +1,6 @@
 class DriverApplicationsController < ApplicationController
   before_action :set_driver_application, only: [:show, :edit, :update, :destroy]
-  before_action :set_page, only: [:new]
+  before_action :set_page, only: [:new, :show, :index]
   # GET /driver_applications
   # GET /driver_applications.json
   def index
@@ -93,7 +93,8 @@ class DriverApplicationsController < ApplicationController
       :license_number,
       :license_image,
       :notes,
-      :years_experience
+      :years_experience,
+      :cab_card
       )
     end
 end
