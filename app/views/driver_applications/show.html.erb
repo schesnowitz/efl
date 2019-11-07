@@ -50,5 +50,10 @@
   <%= @driver_application.email %>
 </p>
 
+
+<p>
+  <strong>Email:</strong>
+  <%= image_tag(@driver_application.license_image) %>
+</p>
 <%= link_to 'Edit', edit_driver_application_path(@driver_application) %> |
 <%= link_to 'Back', driver_applications_path %>

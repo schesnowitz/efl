@@ -1,4 +1,5 @@
-<section class="py-6">
+<% if @page.show_performance? %>
+<section class="py-6" id="performance">
   <div class="bg-holder overlay overlay-1" style="background-image">
     <%= image_tag(@page.eight_82) if @page.performance_image.attached? %>
   </div>
@@ -57,10 +58,12 @@
             </div>
           </div>
         </div>
-        <div class="text-center text-lg-left"><%= link_to @page.performance_text13, root_path, class: "btn btn-outline-light hvr-sweep-top btn-sm mt-5 mt-lg-4 mb-2" %>
-        </div>
+        <div class="text-center text-lg-left"><span class="btn btn-outline-light hvr-sweep-top btn-sm mt-5 mt-lg-4 mb-2" ><%= @page.performance_text14 %></span></div>
       </div>
     </div>
+      <%= link_to "Edit", edit_performance_path, class: "btn btn-outline-info btn-lg pull-right" %> 
   </div>
   <!-- end of .container-->
 </section>
+<% else %>
+<% end %>

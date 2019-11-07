@@ -1,0 +1,73 @@
+<div class="overflow-hidden">
+  <%= render 'pages/partials/navi' %>  
+  <%= render 'pages/edit_partials/edit_settings' %> 
+</div>
+<div class='container'>
+  <%= simple_form_for(@page) do |f| %>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <%= f.input :show_home, label: "show home section?" %>
+      </div>
+      <div class="col-sm">
+        <%= f.input :show_about, label: "show about section?" %>
+      </div>
+      <div class="col-sm">
+        <%= f.input :show_stats, label: "show stats section?" %>
+      </div>
+      <div class="col-sm">
+        <%= f.input :show_services, label: "show services section?" %>
+      </div>
+      <div class="col-sm">
+        <%= f.input :show_performance, label: "show performance section?" %>
+      </div>
+      <div class="col-sm">
+        <%= f.input :show_get_started, label: "show get started section?" %>
+      </div>
+      <div class="col-sm">
+        <%= f.input :show_contact, label: "show contact section?" %>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <%= f.input :show_logo_image, label: "Show logo image?" %>
+        <%= f.input :show_logo_text, label: "Show logo text?" %>
+        <%= f.input :logo_image, label: "Logo" %>
+      </div>
+      <div class="col-sm">
+        <%= f.input :mailer_send_to_email2, label: "Send driver applications to" %>
+        <%= f.input :mailer_send_to_email1, label: "Send contact email to" %>
+      </div>
+      <div class="col-sm">
+        <%= f.input :name, label: "Application Name" %>
+      </div>
+    </div>
+  </div>
+
+    <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <%= f.input :logo_text1, label: "Logo Text 1" %>
+      </div>
+      <div class="col-sm">
+<%= f.input :logo_text2, label: "Logo Text 2" %>
+      </div>
+      <div class="col-sm">
+        <%= f.input :logo_text3, label: "Logo Text 3" %>
+      </div>
+    </div>
+  </div>
+  
+  <br>
+  <br>
+  <div class="form-actions">
+    <%= f.button :submit, data: {disable_with: 'One moment please...'}, class: "btn btn-default btn-dark" %> 
+    | <%= link_to "Home", root_path, class: "btn btn-default btn-dark" %> 
+  </div>
+  <br>
+  <% end %>
+</div>
+<%= render "pages/edit_partials/edit_footer_while_in_edit_mode" %>

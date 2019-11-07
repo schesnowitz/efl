@@ -1,0 +1,126 @@
+<div class="overflow-hidden">
+  <%= render 'pages/edit_partials/edit_services' %>  
+</div>
+<div class='container'>
+  <%= simple_form_for(@page) do |f| %>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <%= f.input :services_text1, label: "Text 1" %>
+      </div>
+      <div class="col-sm">
+        <%= f.input :services_text2, label: "Text 2"  %>
+      </div>
+      <div class="col-sm">
+        <%= f.input :services_text3, label: "Text 3"  %>
+      </div>
+      <div class="col-sm">
+        <%= f.input :services_text4, label: "Text 4"  %>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <%= f.input :services_text5, label: "Text 5" %>
+      </div>
+      <div class="col-sm">
+        <%= f.input :services_text6, label: "Text 6"  %>
+      </div>
+      <div class="col-sm">
+        <%= f.input :services_text7, label: "Text 7"  %>
+      </div>
+      <div class="col-sm">
+        <%= f.input :services_text8, label: "Text 8"  %>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <%= f.input :services_text9, label: "Text 9"  %>
+      </div>
+      <div class="col-sm">
+        <%= f.input :services_text10, label: "Text 10"  %>
+      </div>
+      <div class="col-sm">
+        <%= f.input :services_text11, label: "Text 11" %>
+      </div>
+      <div class="col-sm">
+        <%= f.input :services_text12, label: "Text 12"  %>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <%= f.input :services_text13, label: "Text 13"  %>
+      </div>
+      <div class="col-sm">
+        <%= f.input :services_text14, label: "Text 14"  %>
+      </div>
+      <div class="col-sm">
+        <%= f.input :services_text15, label: "Text 15" %>
+      </div>
+      <div class="col-sm">
+        <%= f.input :services_text16, label: "Text 16"  %>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <%= f.input :services_text17, label: "Text 17"  %>
+      </div>
+      <div class="col-sm">
+        <%= f.input :services_text18, label: "Text 18"  %>
+      </div>
+      <div class="col-sm">
+        <%= f.input :services_text19, label: "Text 19" %>
+      </div>
+      <div class="col-sm">
+        <%= f.input :services_text20, label: "Text 20"  %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      <%= f.input :services_text21, label: "Text 21" %>
+    </div>
+    <div class="col-sm">
+      <%= f.input :services_text22, label: "Text 22"  %>
+    </div>
+    <div class="col-sm">
+      <%= f.input :services_text23, label: "Text 23"  %>
+    </div>
+    <div class="col-sm">
+      <%= f.input :services_text24, label: "Text 24"  %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      <%= f.input :services_text25, label: "Text 25" %>
+    </div>
+    <div class="col-sm">
+      <%= f.input :services_text26, label: "Text 26"  %>
+    </div>
+    <div class="col-sm">
+      div
+    </div>
+    <div class="col-sm">
+      div
+    </div>
+  </div>  
+</div>
+
+</div>  
+<br>
+<br>
+<div class="form-actions">
+  <%= f.button :submit, data: {disable_with: 'One moment please...'}, class: "btn btn-default btn-dark" %> 
+  | <%= link_to "Home", root_path, class: "btn btn-default btn-dark" %> 
+</div>
+<br>
+<% end %>
+</div>
+<%= render "pages/edit_partials/edit_footer_while_in_edit_mode" %>

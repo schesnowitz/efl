@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Incoming Contacts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Message</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @incoming_contacts.each do |incoming_contact| %>
+      <tr>
+        <td><%= incoming_contact.name %></td>
+        <td><%= incoming_contact.email %></td>
+        <td><%= incoming_contact.message %></td>
+        <td><%= link_to 'Show', incoming_contact %></td>
+        <td><%= link_to 'Edit', edit_incoming_contact_path(incoming_contact) %></td>
+        <td><%= link_to 'Destroy', incoming_contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Incoming Contact', new_incoming_contact_path %>

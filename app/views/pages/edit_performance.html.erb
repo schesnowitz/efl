@@ -3,19 +3,74 @@
 </div>
 <div class='container'>
   <%= simple_form_for(@page) do |f| %>
-  <%= f.input :performance_text1, label: "Text 1" %>
-  <%= f.input :performance_text2, label: "Text 2"  %>
-  <%= f.input :performance_text3, label: "Text 3"  %>
-  <%= f.input :performance_text4, label: "Text 4"  %>
-  <%= f.input :performance_text5, label: "Text 5"  %>
-  <%= f.input :performance_text6, label: "Text 6" %>
-  <%= f.input :performance_text7, label: "Text 7"  %>
-  <%= f.input :performance_text8, label: "Text 8"  %>
-  <%= f.input :performance_text9, label: "Text 9"  %>
-  <%= f.input :performance_text10, label: "Text 10"  %>
-  <%= f.input :performance_text11, label: "Text 11" %>
-  <%= f.input :performance_text12, label: "Text 12"  %>
-  <%= f.input :performance_text13, label: "Text 13"  %>
+  <div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <%= f.input :performance_text1, label: "Text 1" %>
+    </div>
+    <div class="col-sm">
+      <%= f.input :performance_text2, label: "Text 2"  %>
+    </div>
+    <div class="col-sm">
+      <%= f.input :performance_text3, label: "Text 3"  %>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-sm">
+      <%= f.input :performance_text4, label: "Text 4"  %>
+    </div>
+    <div class="col-sm">
+      <%= f.input :performance_text5, label: "Text 5"  %>
+    </div>
+        <div class="col-sm">
+      <%= f.input :performance_text6, label: "Text 6" %>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <%= f.input :performance_text7, label: "Text 7" %>
+    </div>
+    <div class="col-sm">
+      <%= f.input :performance_text8, label: "Text 8"  %>
+    </div>
+    <div class="col-sm">
+      <%= f.input :performance_text9, label: "Text 9"  %>
+    </div>
+        <div class="col-sm">
+       <%= f.input :performance_text10, label: "Text 10" %>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+     
+      <%= f.input :performance_text11, label: "Text 11"  %>
+    </div>
+    <div class="col-sm">
+      
+      <%= f.input :performance_text12, label: "Text 12"  %>
+    </div>
+    <div class="col-sm">
+      
+      <%= f.input :performance_text13, label: "Text 13"  %>
+    </div>
+
+        <div class="col-sm">
+        <%= f.input :performance_text14, label: "Button Text"  %>
+      
+    </div>
+  </div>
+</div>
+
   <div class="row">
     <div class="col-sm">
       <%= f.input :performance_num1, input_html: { min: '0', max: '100' }, label: "Percentage 1", hint: "Only numerical values between 0 and 100"  %>
@@ -37,10 +92,10 @@
   <br>
   <br>
   <div class="form-actions">
-    <%= f.button :submit, data: {disable_with: 'One moment please...'} %> 
-    | <%= link_to "Home", root_path, class: "btn btn-default" %> 
+    <%= f.button :submit, data: {disable_with: 'One moment please...'}, class: "btn btn-default btn-dark" %> 
+    | <%= link_to "Home", root_path, class: "btn btn-default btn-dark" %> 
   </div>
   <br>
   <% end %>
 </div>
-<%= render "pages/partials/footer" %>
+<%= render "pages/edit_partials/edit_footer_while_in_edit_mode" %>

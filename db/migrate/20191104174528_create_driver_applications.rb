@@ -18,7 +18,6 @@ class CreateDriverApplications < ActiveRecord::Migration[5.2]
       t.string :vin
       t.string :mileage
       t.string :license_number
-      t.string :license_image
       t.text :notes
       t.integer :years_experience
 

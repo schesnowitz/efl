@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @incoming_contact.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @incoming_contact.email %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @incoming_contact.message %>
+</p>
+
+<%= link_to 'Edit', edit_incoming_contact_path(@incoming_contact) %> |
+<%= link_to 'Back', incoming_contacts_path %>

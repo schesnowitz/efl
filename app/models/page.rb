@@ -29,6 +29,26 @@ class Page < ApplicationRecord
     return self.top_image.variant(resize: '3000x2000!') if self.top_image.attached? 
   end
 
+  has_one_attached :about_image
+  def about_nail
+    return self.about_image.variant(resize: '100x100') if self.about_image.attached? 
+  end
+
+  def about_image_resized
+    return self.about_image.variant(resize: '3000x2844!') if self.about_image.attached? 
+  end
+
+  has_one_attached :logo_image
+  def logo_nail
+    return self.logo_image.variant(resize: '100x50') if self.logo_image.attached? 
+  end
+
+  def logo_image_resized
+    return self.logo_image.variant(resize: '200x100!') if self.logo_image.attached? 
+  end
+
+
+
   
  
 

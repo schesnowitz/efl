@@ -1,5 +1,5 @@
-
-<section class="py-7 text-center" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+<% if @page.show_stats? %>
+<section class="py-7 text-center" data-zanim-timeline="{}" data-zanim-trigger="scroll" id="stats">
   <div class="bg-holder overlay" style="background-image">
     <%= image_tag(@page.three_k_eight_eleven) if @page.count_image.attached? %>
   </div>
@@ -55,3 +55,5 @@
   </div>
   <!-- end of .container-->
 </section>
+<% else %>
+<% end %>

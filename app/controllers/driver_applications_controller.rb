@@ -1,6 +1,6 @@
 class DriverApplicationsController < ApplicationController
   before_action :set_driver_application, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_page, only: [:new]
   # GET /driver_applications
   # GET /driver_applications.json
   def index
@@ -68,6 +68,9 @@ class DriverApplicationsController < ApplicationController
       @driver_application = DriverApplication.find(params[:id])
     end
 
+    def set_page
+      @page = Page.find(1)
+    end
     # Never trust parameters from the scary internet, only allow the white list through.
     def driver_application_params
       params.require(:driver_application).permit(

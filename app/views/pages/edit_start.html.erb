@@ -1,0 +1,19 @@
+<div class="overflow-hidden">
+  <%= render 'pages/edit_partials/edit_start' %>  
+</div>
+<div class='container'>
+  <%= simple_form_for(@page) do |f| %>
+  <%= f.input :start_text1, label: "Text 1" %>
+  <%= f.input :start_text2, label: "Text 2"  %>
+  <%= f.input :start_text3, label: "Text 3"  %>
+
+  <br>
+  <br>
+  <div class="form-actions">
+    <%= f.button :submit, data: {disable_with: 'One moment please...'}, class: "btn btn-default btn-dark" %> 
+    | <%= link_to "Home", root_path, class: "btn btn-default btn-dark" %> 
+  </div>
+  <br>
+  <% end %>
+</div>
+<%= render "pages/edit_partials/edit_footer_while_in_edit_mode" %>

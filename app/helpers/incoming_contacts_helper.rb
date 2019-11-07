@@ -1,0 +1,2 @@
+module IncomingContactsHelper
+end

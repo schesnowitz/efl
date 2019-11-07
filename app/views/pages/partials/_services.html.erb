@@ -1,112 +1,114 @@
-      <section class="text-center">
-
-        <div class="container">
-          <div class="row mb-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-            <div class="col">
-              <div class="overflow-hidden">
-                <h2 class="fs-md-5" data-zanim-xs='{"duration":"1.5","delay":0}'>our services</h2>
-              </div>
-              <div class="overflow-hidden">
-                <p class="fs--1 text-uppercase text-black ls-0 mb-0" data-zanim-xs='{"duration":"1.5","delay":0.1}'>we plan, design, build and market high quality products</p>
-              </div>
-              <div class="overflow-hidden">
-                <hr class="hr-short border-black" data-zanim-xs='{"duration":"1.5","delay":0.2}' />
-              </div>
+<% if @page.show_services? %>
+<section class="text-center" id="services">
+  <div class="container">
+    <div class="row mb-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+      <div class="col">
+        <div class="overflow-hidden">
+          <h2 class="fs-md-5" data-zanim-xs='{"duration":"1.5","delay":0}'><%= @page.services_text1 %></h2>
+        </div>
+        <div class="overflow-hidden">
+          <p class="fs--1 text-uppercase text-black ls-0 mb-0" data-zanim-xs='{"duration":"1.5","delay":0.1}'><%= @page.services_text2 %></p>
+        </div>
+        <div class="overflow-hidden">
+          <hr class="hr-short border-black" data-zanim-xs='{"duration":"1.5","delay":0.2}' />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-lg-4 mb-3" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+        <div class="overflow-hidden">
+          <div class="service-item p-3 p-md-4 h-100">
+            <div class="overflow-hidden">
+              <div class="px-4" data-zanim-xs='{"duration":"1.5","delay":"0"}'><img class="service-icon" src="../assets/img/line-icons/icons/fountain-pen.svg" alt="" /></div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6 col-lg-4 mb-3" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-              <div class="overflow-hidden">
-                <div class="service-item p-3 p-md-4 h-100">
-                  <div class="overflow-hidden">
-                    <div class="px-4" data-zanim-xs='{"duration":"1.5","delay":"0"}'><img class="service-icon" src="../assets/img/line-icons/icons/fountain-pen.svg" alt="" /></div>
-                  </div>
-                  <div class="overflow-hidden">
-                    <h5 class="font-weight-normal ls-2 mb-2" data-zanim-xs='{"duration":"1.5","delay":"0.1"}'>Graphic design</h5>
-                  </div>
-                  <div class="overflow-hidden">
-                    <p class="font-weight-normal" data-zanim-xs='{"duration":"1.5","delay":"0.2"}'>We have a graphic design team with <br class="d-block d-sm-none"> a good name in the industry for our <br class="d-block d-sm-none"> unique and modern graphic designs.</p>
-                  </div>
-                </div>
-              </div>
+            <div class="overflow-hidden">
+              <h5 class="font-weight-normal ls-2 mb-2" data-zanim-xs='{"duration":"1.5","delay":"0.1"}'><%= @page.services_text3 %></h5>
             </div>
-            <div class="col-sm-6 col-lg-4 mb-3" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-              <div class="overflow-hidden">
-                <div class="service-item p-3 p-md-4 h-100">
-                  <div class="overflow-hidden">
-                    <div class="px-4" data-zanim-xs='{"duration":"1.5","delay":"0.2"}'><img class="service-icon" src="../assets/img/line-icons/icons/pear.svg" alt="" /></div>
-                  </div>
-                  <div class="overflow-hidden">
-                    <h5 class="font-weight-normal ls-2 mb-2" data-zanim-xs='{"duration":"1.5","delay":"0.30000000000000004"}'>brand identity</h5>
-                  </div>
-                  <div class="overflow-hidden">
-                    <p class="font-weight-normal" data-zanim-xs='{"duration":"1.5","delay":"0.4"}'>We will create your brand identity with <br class='d-block d-sm-none'> our dedication and hard work. Our team <br class='d-block d-sm-none'> is always ready to take the challenge.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 mb-3" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-              <div class="overflow-hidden">
-                <div class="service-item p-3 p-md-4 h-100">
-                  <div class="overflow-hidden">
-                    <div class="px-4" data-zanim-xs='{"duration":"1.5","delay":"0.3"}'><img class="service-icon" src="../assets/img/line-icons/icons/export.svg" alt="" /></div>
-                  </div>
-                  <div class="overflow-hidden">
-                    <h5 class="font-weight-normal ls-2 mb-2" data-zanim-xs='{"duration":"1.5","delay":"0.4"}'>Cloud Storage</h5>
-                  </div>
-                  <div class="overflow-hidden">
-                    <p class="font-weight-normal" data-zanim-xs='{"duration":"1.5","delay":"0.5"}'>We have developed a cutting edge <br class='d-block d-sm-none'> system that automates our tasks that <br class='d-block d-sm-none'> often get put on the back-burner.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 mb-3" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-              <div class="overflow-hidden">
-                <div class="service-item p-3 p-md-4 h-100">
-                  <div class="overflow-hidden">
-                    <div class="px-4" data-zanim-xs='{"duration":"1.5","delay":"0.3"}'><img class="service-icon" src="../assets/img/line-icons/icons/light-bulb.svg" alt="" /></div>
-                  </div>
-                  <div class="overflow-hidden">
-                    <h5 class="font-weight-normal ls-2 mb-2" data-zanim-xs='{"duration":"1.5","delay":"0.4"}'>creative theme</h5>
-                  </div>
-                  <div class="overflow-hidden">
-                    <p class="font-weight-normal" data-zanim-xs='{"duration":"1.5","delay":"0.5"}'>We build outstanding and user-friendly <br class='d-block d-sm-none'> bootstrap themes with best UX which <br class='d-block d-sm-none'> works in all platforms and browsers.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 mb-3" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-              <div class="overflow-hidden">
-                <div class="service-item p-3 p-md-4 h-100">
-                  <div class="overflow-hidden">
-                    <div class="px-4" data-zanim-xs='{"duration":"1.5","delay":"0.4"}'><img class="service-icon" src="../assets/img/line-icons/icons/pie-chart.svg" alt="" /></div>
-                  </div>
-                  <div class="overflow-hidden">
-                    <h5 class="font-weight-normal ls-2 mb-2" data-zanim-xs='{"duration":"1.5","delay":"0.5"}'>making strategy</h5>
-                  </div>
-                  <div class="overflow-hidden">
-                    <p class="font-weight-normal" data-zanim-xs='{"duration":"1.5","delay":"0.6000000000000001"}'>Our strategy making process is <br class='d-block d-sm-none'> efficient by which we can create <br class='d-block d-sm-none'> businesses that will sustain in the future.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 mb-3" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-              <div class="overflow-hidden">
-                <div class="service-item p-3 p-md-4 h-100">
-                  <div class="overflow-hidden">
-                    <div class="px-4" data-zanim-xs='{"duration":"1.5","delay":"0.5"}'><img class="service-icon" src="../assets/img/line-icons/icons/wifi.svg" alt="" /></div>
-                  </div>
-                  <div class="overflow-hidden">
-                    <h5 class="font-weight-normal ls-2 mb-2" data-zanim-xs='{"duration":"1.5","delay":"0.6"}'>Network Setup</h5>
-                  </div>
-                  <div class="overflow-hidden">
-                    <p class="font-weight-normal" data-zanim-xs='{"duration":"1.5","delay":"0.7"}'>We provide the latest secured network <br class='d-block d-sm-none'> solutions to our all customers using <br class='d-block d-sm-none'> service from proven technology.</p>
-                  </div>
-                </div>
-              </div>
+            <div class="overflow-hidden">
+              <p class="font-weight-normal" data-zanim-xs='{"duration":"1.5","delay":"0.2"}'><%= @page.services_text4 %> <br class="d-block d-sm-none"> <%= @page.services_text5 %> <br class="d-block d-sm-none"> <%= @page.services_text6 %></p>
             </div>
           </div>
         </div>
-        <!-- end of .container-->
-
-      </section>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-3" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+        <div class="overflow-hidden">
+          <div class="service-item p-3 p-md-4 h-100">
+            <div class="overflow-hidden">
+              <div class="px-4" data-zanim-xs='{"duration":"1.5","delay":"0.2"}'><img class="service-icon" src="../assets/img/line-icons/icons/pear.svg" alt="" /></div>
+            </div>
+            <div class="overflow-hidden">
+              <h5 class="font-weight-normal ls-2 mb-2" data-zanim-xs='{"duration":"1.5","delay":"0.30000000000000004"}'><%= @page.services_text7 %></h5>
+            </div>
+            <div class="overflow-hidden">
+              <p class="font-weight-normal" data-zanim-xs='{"duration":"1.5","delay":"0.4"}'><%= @page.services_text8 %> <br class='d-block d-sm-none'> <%= @page.services_text9 %> <br class='d-block d-sm-none'> <%= @page.services_text10 %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-3" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+        <div class="overflow-hidden">
+          <div class="service-item p-3 p-md-4 h-100">
+            <div class="overflow-hidden">
+              <div class="px-4" data-zanim-xs='{"duration":"1.5","delay":"0.3"}'><img class="service-icon" src="../assets/img/line-icons/icons/export.svg" alt="" /></div>
+            </div>
+            <div class="overflow-hidden">
+              <h5 class="font-weight-normal ls-2 mb-2" data-zanim-xs='{"duration":"1.5","delay":"0.4"}'><%= @page.services_text11 %></h5>
+            </div>
+            <div class="overflow-hidden">
+              <p class="font-weight-normal" data-zanim-xs='{"duration":"1.5","delay":"0.5"}'><%= @page.services_text11 %><br class='d-block d-sm-none'> <%= @page.services_text13 %> <br class='d-block d-sm-none'> <%= @page.services_text14 %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-3" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+        <div class="overflow-hidden">
+          <div class="service-item p-3 p-md-4 h-100">
+            <div class="overflow-hidden">
+              <div class="px-4" data-zanim-xs='{"duration":"1.5","delay":"0.3"}'><img class="service-icon" src="../assets/img/line-icons/icons/light-bulb.svg" alt="" /></div>
+            </div>
+            <div class="overflow-hidden">
+              <h5 class="font-weight-normal ls-2 mb-2" data-zanim-xs='{"duration":"1.5","delay":"0.4"}'><%= @page.services_text15 %></h5>
+            </div>
+            <div class="overflow-hidden">
+              <p class="font-weight-normal" data-zanim-xs='{"duration":"1.5","delay":"0.5"}'><%= @page.services_text16 %> <br class='d-block d-sm-none'> <%= @page.services_text17 %> <br class='d-block d-sm-none'> <%= @page.services_text8 %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-3" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+        <div class="overflow-hidden">
+          <div class="service-item p-3 p-md-4 h-100">
+            <div class="overflow-hidden">
+              <div class="px-4" data-zanim-xs='{"duration":"1.5","delay":"0.4"}'><img class="service-icon" src="../assets/img/line-icons/icons/pie-chart.svg" alt="" /></div>
+            </div>
+            <div class="overflow-hidden">
+              <h5 class="font-weight-normal ls-2 mb-2" data-zanim-xs='{"duration":"1.5","delay":"0.5"}'><%= @page.services_text19 %></h5>
+            </div>
+            <div class="overflow-hidden">
+              <p class="font-weight-normal" data-zanim-xs='{"duration":"1.5","delay":"0.6000000000000001"}'><%= @page.services_text20 %> <br class='d-block d-sm-none'> <%= @page.services_text21 %> <br class='d-block d-sm-none'> <%= @page.services_text22 %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-3" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+        <div class="overflow-hidden">
+          <div class="service-item p-3 p-md-4 h-100">
+            <div class="overflow-hidden">
+              <div class="px-4" data-zanim-xs='{"duration":"1.5","delay":"0.5"}'><img class="service-icon" src="../assets/img/line-icons/icons/wifi.svg" alt="" /></div>
+            </div>
+            <div class="overflow-hidden">
+              <h5 class="font-weight-normal ls-2 mb-2" data-zanim-xs='{"duration":"1.5","delay":"0.6"}'><%= @page.services_text23 %></h5>
+            </div>
+            <div class="overflow-hidden">
+              <p class="font-weight-normal" data-zanim-xs='{"duration":"1.5","delay":"0.7"}'><%= @page.services_text24 %> <br class='d-block d-sm-none'> <%= @page.services_text25 %> <br class='d-block d-sm-none'> <%= @page.services_text26 %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= link_to "Edit", edit_services_path, class: "btn btn-outline-info btn-lg pull-right" %>  
+  </div>
+  <!-- end of .container-->
+</section>
+<% else %>
+<% end %>
