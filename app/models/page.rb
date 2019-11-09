@@ -2,14 +2,7 @@ class Page < ApplicationRecord
   
   
 
-  has_one_attached :count_image
-  def count_nail
-      return self.count_image.variant(resize: '100x100') if self.count_image.attached? 
-  end
 
-  def three_k_eight_eleven
-    return self.count_image.variant(resize: '3000x811!') if self.count_image.attached? 
-  end
 
   has_one_attached :performance_image
   def performance_nail

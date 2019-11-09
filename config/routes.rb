@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :stats, except: :destroy
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   resources :incoming_contacts
   resources :driver_applications
