@@ -1,6 +1,7 @@
 class DriverApplicationsController < ApplicationController
   before_action :set_driver_application, only: [:show, :edit, :update, :destroy]
-  before_action :set_page, only: [:new, :show, :index]
+  before_action :set_page, only: [:new, :show, :index, :create]
+  before_action :authenticate_user!, except: [:new, :create] 
   # GET /driver_applications
   # GET /driver_applications.json
   def index

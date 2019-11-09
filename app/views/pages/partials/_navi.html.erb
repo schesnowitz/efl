@@ -44,7 +44,17 @@
             
             <li class="nav-item"><span class="nav-link" data-fancyscroll="data-fancyscroll" data-offset="64"><span class="nav-link-text"><%= link_to(edit_settings_path) do %>Edit Settings<% end %></span></span></li>
             
+    <% if current_user.try(:admin)  %>
     
+            <li class="nav-item"><span class="nav-link" href="#drive" data-fancyscroll="data-fancyscroll" data-offset="64"><span class="nav-link-text"><%= link_to  destroy_user_session_path, method: :destroy do %>Sign Out<% end %></span></span></li>
+            
+            <% end %>
+          <% if !current_user.try(:admin)  %>
+     
+                  <li class="nav-item"><span class="nav-link" data-fancyscroll="data-fancyscroll" data-offset="64"><span class="nav-link-text"><%= link_to  new_user_session_path do %>Sign in<% end %></span></span></li>
+      
+      
+      <% end %>
           </ul>
         </div>
       </div>
@@ -52,4 +62,4 @@
 
              
 
-            
+          

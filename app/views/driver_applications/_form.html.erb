@@ -1,24 +1,26 @@
+
+
 <%= simple_form_for(@driver_application) do |f| %>
 <%= f.error_notification %>
 <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 <div class="form-inputs">
   <div class="row">
     <div class="col-sm-4">
-      <h3>Personal Information</h3>
+      
       <%= f.input :first_name %>
       <%= f.input :last_name %>
-      <%= f.input :dob, start_year: Date.today.year - 75, end_year: Date.today.year - 23, label: "Date of Birth", prompt: "Make a selection" %>
+      <%= f.input :dob, start_year: Date.today.year - 75, end_year: Date.today.year - 23, label: "Date of Birth" %>
       <%= f.input :social, label: "Social Security Number" %>
     </div>
     <div class="col-sm-4">
-      <h3>Address</h3>
+     
       <%= f.input :street %>
       <%= f.input :city %>
       <%= f.input :state, collection: ApplicationRecord::StateProvence, include_blank: "Select State | Provence" %>
       <%= f.input :postal %>
     </div>
     <div class="col-sm">
-      <h3>Contact</h3>
+      
       <%= f.input :phone %>
       <%= f.input :email %>
       <h3>License Information</h3>
@@ -49,15 +51,17 @@
       </div>
       <div class="col-sm">
         <%= f.input :mileage %>
-        <%= f.input :cab_card %>
+        
       </div>
     </div>
   </div>
+  <%= f.input :cab_card %>
   <br>
   <h5>Extra Information</h5>
   <%= f.input :notes, placeholder: "Any extra info you wanna pass along?", label: false %>
   <div class="form-actions">
     <%= f.submit "Send Info", class: "btn btn-info", 'data-disable-with' => "Sending Data..." %>
+        | <%= link_to "Home", root_path, class: "btn btn-default btn-dark" %> 
   </div>
 </div>
 <% end %>

@@ -7,3 +7,6 @@ mail.deliver_now
 EDITOR=vim rails credentials:edit
 
      <%= @driver_application.years_experience, input_html: { min: '0', step: 'any' }, label: "Years of experience" %>
+
+
+     <%= link_to 'Sight out', destroy_user_session_path, method: :destroy %>

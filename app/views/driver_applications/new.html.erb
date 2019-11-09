@@ -1,8 +1,9 @@
+<%= render "layouts/spacer" %>
 <div class='container'>
   <br>
 
   <div class="panel panel-default bg_color">
-    <div class="panel-heading">New Driver Application</div>
+    <h4 class="panel-heading">Driver Operator Information</h4>
     <div class="panel-body">
       <%= render 'form', driver_application: @driver_application %>
       <%= link_to 'Back', driver_applications_path %>

@@ -71,3 +71,4 @@ gem "font-awesome-rails"
 gem 'simple_form'
 gem 'bootstrap-sass-extras'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+gem 'devise'
