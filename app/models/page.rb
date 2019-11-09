@@ -42,18 +42,11 @@ class Page < ApplicationRecord
 
 
 
-  
- 
+
+  # validates :performance_num1, :performance_num2, :performance_num3, :performance_num4, numericality: { less_than_or_equal_to: 100 }
+
+  # validates :count_num1, :count_num2, :count_num3, :performance_num1, :performance_num2, :performance_num3, :numericality => {:only_integer => true}
 
   
-
-
-
-
-  validates :performance_num1, :performance_num2, :performance_num3, :performance_num4, numericality: { less_than_or_equal_to: 100 }
-
-  validates :count_num1, :count_num2, :count_num3, :performance_num1, :performance_num2, :performance_num3, :numericality => {:only_integer => true}
-
-  
-  validates :performance_num1, :performance_num2, :performance_num3, length: { maximum: 10 }
+  # validates :performance_num1, :performance_num2, :performance_num3, length: { maximum: 10 }
 end

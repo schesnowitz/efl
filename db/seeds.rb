@@ -1,118 +1,24 @@
 
 require 'faker'
 
-page = Page.create!(
-  mailer_send_to_email1: "info@eaglefreightlines.com",
-  mailer_send_to_email2: "info@eaglefreightlines.com", 
-  name: Faker::TvShows::Simpsons.character, 
-  count_text1: Faker::Company.industry,
-  count_text2: Faker::Company.industry,
-  count_text3: Faker::Company.industry,
-  count_text4: Faker::Company.industry,
-  count_text5: Faker::Company.industry,
-  count_text6: Faker::Company.industry,
-  count_num1: "12343",
-  count_num2:"3424366",
-  count_num3: "98765",
 
-  performance_text1: Faker::Company.bs,
-  performance_text2: Faker::Company.bs,
-  performance_text3: Faker::Company.bs,
-  performance_text4: Faker::Company.bs,
-  performance_text5: Faker::Company.bs,
-  performance_text6: Faker::Company.bs,
-  performance_text7: Faker::Company.bs,
-  performance_text8: Faker::Company.bs,
-  performance_text9: Faker::Company.bs,
-  performance_text10: Faker::Company.bs,
-  performance_text11: Faker::Company.bs,
-  performance_text12: Faker::Company.bs,
-  performance_text13: Faker::Company.bs,
-  performance_text14: Faker::Company.bs,
-  performance_text15: Faker::Company.bs,
-  performance_num1: 88,
-  performance_num2: 69,
-  performance_num3: 56,
-  performance_num4: 93,
+stat = Stat.find_or_initialize_by(id: 1)
 
-  top_text1: Faker::Company.bs,
-  top_text2: Faker::Company.bs,
-  top_text3: Faker::Company.bs,
-  top_text4: Faker::Company.bs,
-  foot_text1: Faker::Company.bs,
-  foot_text2: Faker::Company.bs,
-  foot_text3: Faker::Company.bs,  
-  foot_text4: Faker::Company.bs,
-  foot_text5: Faker::Company.bs,
-  contact_text1: Faker::Company.bs,
-  contact_text2: Faker::Company.bs,
-  contact_text3: Faker::Company.bs,
-  contact_text4: Faker::Company.bs,
-  contact_text5: Faker::Company.bs,
-  contact_text6: Faker::Company.bs,
-  contact_text7: Faker::Company.bs,
-  contact_text8: Faker::Company.bs,
-  contact_text9: Faker::Company.bs,
-  contact_text10: Faker::Company.bs,
-  contact_text11: Faker::Company.bs,
-  contact_text12: Faker::Company.bs,
-  contact_text13: Faker::Company.bs,
-  contact_text14: Faker::Company.bs,
-  contact_text15: Faker::Company.bs,
-  about_text1: Faker::Company.bs,
-  about_text2: Faker::Company.bs,
-  about_text3: Faker::Company.bs,
-  about_text4: Faker::Company.bs,
-  about_text5: Faker::Company.bs,
-  about_text6: Faker::Company.bs,
-  about_text7: Faker::Company.bs,
-  about_text8: Faker::Company.bs,
-  about_text9: Faker::Company.bs,
-  about_text10: Faker::Company.bs,
-  about_text11: Faker::Company.bs,
-  about_text12: Faker::Company.bs,
-  about_text13: Faker::Company.bs,
-  about_text14: Faker::Company.bs,
-  about_text15: Faker::Company.bs,
-  services_text1: Faker::Company.bs,
-  services_text2: Faker::Company.bs,
-  services_text3: Faker::Company.bs,
-  services_text4: Faker::Company.bs,
-  services_text5: Faker::Company.bs,
-  services_text6: Faker::Company.bs,
-  services_text7: Faker::Company.bs,
-  services_text8: Faker::Company.bs,
-  services_text9: Faker::Company.bs,
-  # services_text10:,
-  services_text11: Faker::Company.bs,
-  services_text12: Faker::Company.bs,
-  services_text13: Faker::Company.bs,
-  services_text14: Faker::Company.bs,
-  services_text15: Faker::Company.bs,
-  services_text16: Faker::Company.bs,
-  services_text17: Faker::Company.bs,
-  services_text18: Faker::Company.bs,
-  services_text19: Faker::Company.bs,
-  services_text20: Faker::Company.bs,
-  services_text21: Faker::Company.bs,
-  services_text22: Faker::Company.bs,
-  services_text23: Faker::Company.bs,
-  services_text24: Faker::Company.bs,
-  services_text25: Faker::Company.bs,
-  services_text26: Faker::Company.bs,
-  services_text27: Faker::Company.bs,
-  services_text28: Faker::Company.bs,
-  services_text29: Faker::Company.bs,
-  services_text30: Faker::Company.bs,
-  start_text1: "Start Text 1",
-  start_text2: "Start Text 2",
-  start_text3: "Start Text 3",
-  start_button_text: "Get Rolling",
-  # about_image:,
-  # performance_image:,
-  # top_image:,
-  # count_image:
-)
+  stat.string_1 = Faker::Company.industry
+  stat.string_2 = Faker::Company.industry
+  stat.string_3 = Faker::Company.industry
+  stat.string_4 = Faker::Company.industry
+  stat.string_5 = Faker::Company.industry
+  stat.string_num_1 = 321321
+  stat.string_num_2 = 54645484
+  stat.string_num_3 = 89874
+stat.save!
+puts stat.inspect
+
+page = Page.find_or_initialize_by(id: 1)
+
+
+page.save!
 puts page.inspect
 
 

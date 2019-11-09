@@ -28,6 +28,6 @@ class Stat < ApplicationRecord
     end
   end
 
-  validates :string_num_1, :string_num_1, :string_num_1, :numericality => { :greater_than_or_equal_to => 0, :less_than_or_equal_to => 9999999999 }
+  # validates :string_num_1, :numericality => { :greater_than_or_equal_to => 0, :less_than_or_equal_to => 9999999999 }
 
 end

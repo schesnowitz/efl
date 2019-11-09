@@ -1,5 +1,6 @@
 class PagesController < ApplicationController                                   
-  before_action :set_page, only: [:show, :edit, :update, :destroy, :edit_count, :edit_performance, :edit_top, :edit_footer, :edit_contact, :edit_about, :edit_services, :edit_start, :edit_settings]
+  before_action :set_page, only: [:show]
+  before_action :set_stat, only: [:show]
 
   # GET /pages
   # GET /pages.json
@@ -97,6 +98,10 @@ class PagesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_page
       @page = Page.find(1)
+    end
+
+    def set_stat
+      @stat = Stat.find(1)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
