@@ -1,0 +1,42 @@
+
+<%= simple_form_for(@service) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :string_1 %>
+    <%= f.input :string_2 %>
+    <%= f.input :string_3 %>
+    <%= f.input :string_4 %>
+    <%= f.input :string_5 %>
+    <%= f.input :string_6 %>
+    <%= f.input :string_7 %>
+    <%= f.input :string_8 %>
+    <%= f.input :string_9 %>
+    <%= f.input :string_10 %>
+    <%= f.input :string_11 %>
+    <%= f.input :string_12 %>
+    <%= f.input :string_13 %>
+    <%= f.input :string_14 %>
+    <%= f.input :string_15 %>
+    <%= f.input :string_16 %>
+    <%= f.input :string_17 %>
+    <%= f.input :string_18 %>
+    <%= f.input :string_19 %>
+    <%= f.input :string_20 %>
+    <%= f.input :string_21 %>
+    <%= f.input :string_22 %>
+    <%= f.input :string_23 %>
+    <%= f.input :string_24 %>
+    <%= f.input :string_25 %>
+    <%= f.input :string_26 %>
+    <%= f.input :string_27 %>
+    <%= f.input :string_28 %>
+    <%= f.input :string_29 %>
+    <%= f.input :string_30 %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

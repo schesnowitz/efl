@@ -1,17 +1,21 @@
 
+
+<% if @stat.hide_stat? %>
+<% else %>
+
 <section class="py-7 text-center" data-zanim-timeline="{}" data-zanim-trigger="scroll" id="stats">
   <div class="bg-holder overlay" style="background-image">
-    <%= image_tag(@stat.image_variant) if @stat.stat_image.attached? %>
+    <%= image_tag(@stat.stat_image_variant) if @stat.stat_image.attached? %>
   </div>
   <!--/.bg-holder-->
   <div class="container">
     <div class="row mb-4">
       <div class="col">
         <div class="overflow-hidden">
-          <h2 class="fs-sm-5 text-white mb-1 mb-lg-2" data-zanim-xs='{"duration":1.5,"delay":0}'><%= @stat.string_1 %></h2>
+          <h2 class="fs-sm-5 text-white mb-1 mb-lg-2" data-zanim-xs='{"duration":1.5,"delay":0}'><%= @stat.stat_string_1 %></h2>
         </div>
         <div class="overflow-hidden">
-          <p class="fs--1 text-uppercase text-white ls-0 mb-0" data-zanim-xs='{"duration":1.5,"delay":0.1}'><%= @stat.string_2 %></p>
+          <p class="fs--1 text-uppercase text-white ls-0 mb-0" data-zanim-xs='{"duration":1.5,"delay":0.1}'><%= @stat.stat_string_2 %></p>
         </div>
         <div class="overflow-hidden">
           <hr class="hr-short border-white" data-zanim-xs='{"duration":1.5,"delay":0.2}' />
@@ -22,30 +26,34 @@
       <div class="col-lg-8">
         <div class="row">
           <div class="col-md-4 mb-4 mb-lg-0">
-            <div class="overflow-hidden"><img class="fun-fact-icon mb-2" src="../assets/img/line-icons/icons/download.svg" alt="" /></div>
+            <div class="overflow-hidden"><img class="fun-fact-icon mb-2" src="../assets/img/line-icons/<%= @stat.stat_svg_1 %>.svg" alt="" /></div>
             <div class="overflow-hidden">
-              <h3 class="text-white text-base font-weight-normal mb-1" data-countup='{"count":<%= @stat.string_num_1 %>}'>0</h3>
+              <h3 class="text-white text-base font-weight-normal mb-1" data-countup='{"count":<%= @stat.stat_string_num_1 %>}'>0</h3>
             </div>
             <div class="overflow-hidden">
-              <p class="text-uppercase text-white font-weight-semi-bold ls-1 mb-0"><%= @stat.string_3 %></p>
+              <p class="text-uppercase text-white font-weight-semi-bold ls-1 mb-0"><%= @stat.stat_string_3 %></p>
             </div>
           </div>
           <div class="col-md-4 mb-4 mb-lg-0">
-            <div class="overflow-hidden"><img class="fun-fact-icon mb-2" src="../assets/img/line-icons/icons/clock.svg" alt="" /></div>
             <div class="overflow-hidden">
-              <h3 class="text-white text-base font-weight-normal mb-1" data-countup='{"count":<%= @stat.string_num_2 %>}'>0</h3>
+
+            <img class="fun-fact-icon mb-2" src="../assets/img/line-icons/<%= @stat.stat_svg_2 %>.svg" alt="" />
+           
             </div>
             <div class="overflow-hidden">
-              <p class="text-uppercase text-white font-weight-semi-bold ls-1 mb-0"><%= @stat.string_4 %></p>
+              <h3 class="text-white text-base font-weight-normal mb-1" data-countup='{"count":<%= @stat.stat_string_num_2 %>}'>0</h3>
+            </div>
+            <div class="overflow-hidden">
+              <p class="text-uppercase text-white font-weight-semi-bold ls-1 mb-0"><%= @stat.stat_string_4 %></p>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="overflow-hidden"><img class="fun-fact-icon mb-2" src="../assets/img/line-icons/icons/battery.svg" alt="" /></div>
+            <div class="overflow-hidden"><img class="fun-fact-icon mb-2" src="<%= ("../assets/img/line-icons//#{@stat.stat_svg_3}.svg") %>" alt="" /></div>
             <div class="overflow-hidden">
-              <h3 class="text-white text-base font-weight-normal mb-1" data-countup='{"count":<%= @stat.string_num_3 %>}'>0</h3>
+              <h3 class="text-white text-base font-weight-normal mb-1" data-countup='{"count":<%= @stat.stat_string_num_3 %>}'>0</h3>
             </div>
             <div class="overflow-hidden">
-              <p class="text-uppercase text-white font-weight-semi-bold ls-1 mb-0"><%= @stat.string_5 %></p>
+              <p class="text-uppercase text-white font-weight-semi-bold ls-1 mb-0"><%= @stat.stat_string_5 %></p>
             </div>
           </div>
         </div>
@@ -54,3 +62,5 @@
   </div>
   <!-- end of .container-->
 </section>
+
+<% end %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Hide take action:</strong>
+  <%= @take_action.hide_take_action %>
+</p>
+
+<p>
+  <strong>Take action string 1:</strong>
+  <%= @take_action.take_action_string_1 %>
+</p>
+
+<%= link_to 'Edit', edit_take_action_path(@take_action) %> |
+<%= link_to 'Back', take_actions_path %>

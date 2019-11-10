@@ -10,8 +10,22 @@ EDITOR=vim rails credentials:edit
 
 
      <%= link_to 'Sight out', destroy_user_session_path, method: :destroy %>
-
-
+  <% render "pages/partials/navi" %>
+  <%= render "pages/partials/preloader" %>
+  
+  <%= render "pages/partials/about" %>
+  <% render "pages/partials/video" %>
+  <% render "pages/partials/why" %>
+ <%= render "pages/partials/services" %>
+  <%= render "pages/partials/performance" %>
+  <% render "pages/partials/how" %>
+  <%= render "pages/partials/start" %>  
+  <% render "pages/partials/projects" %>
+  <% render "pages/partials/more" %>
+  <% render "pages/partials/team" %>
+  <% render "pages/partials/price" %>
+  <%= render "pages/partials/contact" %>
+  <% render "pages/partials/bottom" %>
 
       t.string :count_text1
       t.string :count_text2
@@ -23,8 +37,14 @@ EDITOR=vim rails credentials:edit
       t.string :count_num2
       t.string :count_num3
 
-rails g scaffold stat string_1 string_2 string_3 string_4 string_5 string_6 string_7
+rails g scaffold action action_string_1 action_string_2 action_string_3 action_string_4 string_5 string_6 string_7 string_8 string_9 string_10 string_11 string_12 string_13 string_14 string_15 integer_1:integer integer_2:integer integer_3:integer integer_4:integer
 
+
+rails g scaffold contact string_1 string_2 string_3 string_4 string_5 string_6 string_7 string_8 string_9 string_10 string_11 string_12 string_13 string_14 string_15 
+
+
+
+rails g scaffold header string_1 string_2 string_3 string_4 
 
       t.string :performance_text1
       t.string :performance_text2

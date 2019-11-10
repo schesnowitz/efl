@@ -1,6 +1,13 @@
 class PagesController < ApplicationController                                   
   before_action :set_page, only: [:show]
   before_action :set_stat, only: [:show]
+  before_action :set_header, only: [:show]
+  before_action :set_contact, only: [:show]
+  before_action :set_about, only: [:show]
+  before_action :set_footer, only: [:show]
+  before_action :set_service, only: [:show]
+  before_action :set_performance, only: [:show]
+  before_action :set_take_action, only: [:show]
 
   # GET /pages
   # GET /pages.json
@@ -66,34 +73,13 @@ class PagesController < ApplicationController
   end
 
 
-  def edit_count
-  end
 
-  def edit_performance
-  end
 
-  def edit_top
-  end
+  # def edit_contact
+  #   @incoming_contact = IncomingContact.new
+  # end
 
-  def edit_footer
-  end
-
-  def edit_contact
-    @incoming_contact = IncomingContact.new
-  end
-
-  def edit_about
-  end
-
-  def edit_services
-  end
-
-  def edit_start
-  end
-
-  def edit_settings
-  end
-
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_page
@@ -104,130 +90,41 @@ class PagesController < ApplicationController
       @stat = Stat.find(1)
     end
 
+    def set_header
+      @header = Header.find(1)
+    end
+
+    def set_contact
+      @contact = Contact.find(1)
+    end
+
+    def set_about
+      @about = About.find(1)
+    end
+
+    def set_footer
+      @footer= Footer.find(1)
+    end
+
+    def set_performance
+      @performance= Performance.find(1)
+    end
+
+    def set_service
+      @service= Service.find(1)
+    end
+
+    def set_take_action
+      @take_action= TakeAction.find(1)
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def page_params
       params.require(:page).permit(
                                   :mailer_send_to_email1,
                                   :mailer_send_to_email1,
-                                  :name, 
-                                  :count_image,
-                                  :count_text1,
-                                  :count_text2,
-                                  :count_text3,
-                                  :count_text4,
-                                  :count_text5,
-                                  :count_text6,
-                                  :count_num1,
-                                  :count_num2,
-                                  :count_num3,
-                                  :performance_image,
-                                  :performance_text1,
-                                  :performance_text2,
-                                  :performance_text3,
-                                  :performance_text4,
-                                  :performance_text5,
-                                  :performance_text6,
-                                  :performance_text7,
-                                  :performance_text8,
-                                  :performance_text9,
-                                  :performance_text10,
-                                  :performance_text11,
-                                  :performance_text12,
-                                  :performance_text13,
-                                  :performance_text14,
-                                  :performance_text15,
-                                  :performance_num1,
-                                  :performance_num2,
-                                  :performance_num3,
-                                  :performance_num4,
-                                  :top_image,
-                                  :top_text1,
-                                  :top_text2,
-                                  :top_text3,
-                                  :top_text4,
-                                  :foot_text1,
-                                  :foot_text2,
-                                  :foot_text3,
-                                  :foot_text4,
-                                  :foot_text5,
-                                  :contact_text1,
-                                  :contact_text2,
-                                  :contact_text3,
-                                  :contact_text4,
-                                  :contact_text5,
-                                  :contact_text6,
-                                  :contact_text7,
-                                  :contact_text8,
-                                  :contact_text9,
-                                  :contact_text10,
-                                  :contact_text11,
-                                  :contact_text12,
-                                  :contact_text13,
-                                  :contact_text14,
-                                  :contact_text15,
-                                  :about_text1,
-                                  :about_text2,
-                                  :about_text3,
-                                  :about_text4,
-                                  :about_text5,
-                                  :about_text6,
-                                  :about_text7,
-                                  :about_text8,
-                                  :about_text9,
-                                  :about_text10,
-                                  :about_text11,
-                                  :about_text12,
-                                  :about_text13,
-                                  :about_text14,
-                                  :about_text15,
-                                  :about_image,
-                                  :services_text1,
-                                  :services_text2,
-                                  :services_text3,
-                                  :services_text4,
-                                  :services_text5,
-                                  :services_text6,
-                                  :services_text7,
-                                  :services_text8,
-                                  :services_text9,
-                                  :services_text10,
-                                  :services_text11,
-                                  :services_text12,
-                                  :services_text13,
-                                  :services_text14,
-                                  :services_text15,
-                                  :services_text16,
-                                  :services_text17,
-                                  :services_text18,
-                                  :services_text19,
-                                  :services_text20,
-                                  :services_text21,
-                                  :services_text22,
-                                  :services_text23,
-                                  :services_text24,
-                                  :services_text25,
-                                  :services_text26,
-                                  :services_text27,
-                                  :services_text28,
-                                  :services_text29,
-                                  :services_text30,
-                                  :start_text1,
-                                  :start_text2,
-                                  :start_text3,     
-                                  :start_button_text,
-                                  :show_home,
-                                  :show_about,
-                                  :show_stats,
-                                  :show_services,
-                                  :show_performance,
-                                  :show_get_started,
-                                  :show_contact,
-                                  :show_logo_image,
-                                  :show_logo_text,
-                                  :logo_image,
-                                  :logo_text1,
-                                  :logo_text2, 
-                                  :logo_text3
+                                  :logo_image
+                                
                                   )
     end
 end

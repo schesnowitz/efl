@@ -1,13 +1,14 @@
-<% if @page.show_contact? %>
+<% if @contact.hide_contact? %>
+<% else %>
 <section id="contact">
   <div class="container">
     <div class="row">
       <div class="col text-center mb-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
         <div class="overflow-hidden">
-          <h2 class="fs-md-5" data-zanim-xs='{"duration":1.5,"delay":0}'><%= @page.contact_text1 %></h2>
+          <h2 class="fs-md-5" data-zanim-xs='{"duration":1.5,"delay":0}'><%= @contact.contact_string_1 %></h2>
         </div>
         <div class="overflow-hidden">
-          <p class="fs--1 text-uppercase text-black ls-0 mb-0" data-zanim-xs='{"duration":1.5,"delay":0.1}'><%= @page.contact_text2 %></p>
+          <p class="fs--1 text-uppercase text-black ls-0 mb-0" data-zanim-xs='{"duration":1.5,"delay":0.1}'><%= @contact.contact_string_2 %></p>
         </div>
         <div class="overflow-hidden">
           <hr class="hr-short border-black" data-zanim-xs='{"duration":1.5,"delay":0.2}' />
@@ -18,37 +19,37 @@
       <div class="col-lg-6 mb-5 mb-lg-0 d-flex flex-column justify-content-between">
         <div class="row">
           <div class="col-12">
-            <h5 class="mb-3"><%= @page.contact_text3 %></h5>
+            <h5 class="mb-3"><%= @contact.contact_string_3 %></h5>
           </div>
           <div class="col-auto mb-2 mb-sm-0" style="width: 190px">
             <div class="row">
               <div class="col-1"><span class="fa fa-location-arrow text-700"></span></div>
               <div class="col px-2">
-                <p class="mb-1 text-700"><strong><%= @page.contact_text4 %> </strong></p>
-                <p class="mb-0 text-600"><%= @page.contact_text5 %><br /><%= @page.contact_text6 %></p>
+                <p class="mb-1 text-700"><strong><%= @contact.contact_string_4 %> </strong></p>
+                <p class="mb-0 text-600"><%= @contact.contact_string_5 %><br /><%= @contact.contact_string_6 %></p>
               </div>
             </div>
           </div>
           <div class="col-auto" style="width: 205px">
             <div class="row mb-2 mb-sm-1">
               <div class="col-1"><span class="fa fa-phone mr-2 text-700"> </span></div>
-              <div class="col px-2"><a class="text-600" href="tel:526853300"><%= @page.contact_text7 %> </a><br /><a class="text-600" href="tel:526853300"><%= @page.contact_text8 %> </a></div>
+              <div class="col px-2"><a class="text-600" href="tel:526853300"><%= @contact.contact_string_7 %> </a><br /><a class="text-600" href="tel:526853300"><%= @contact.contact_string_8 %> </a></div>
             </div>
             <div class="row">
               <div class="col-1"><span class="fa fa-envelope mr-2 text-700"></span></div>
-              <div class="col px-2"><a class="text-600" href="mailto:contact@reign.com"><%= @page.contact_text9 %></a></div>
+              <div class="col px-2"><a class="text-600" href="mailto:contact@reign.com"><%= @contact.contact_string_9 %></a></div>
             </div>
           </div>
         </div>
         <div class="googlemap rounded theme-map mt-4" data-latlng="48.8583701,2.2922873,17" data-scrollwheel="false" data-icon="../assets/img/map-marker.png" data-zoom="17" data-theme="Default" style="min-height: 14.63rem;">
           <div class="marker-content py-3">
-            <h5><%= @page.contact_text10 %></h5>
-            <p><%= @page.contact_text11 %></p>
+            <h5><%= @contact.contact_string_10 %></h5>
+            <p><%= @contact.contact_string_11 %></p>
           </div>
         </div>
       </div>
       <div class="col-lg-6">
-        <h5 class="mb-3"><%= @page.contact_text12 %></h5>
+        <h5 class="mb-3"><%= @contact.contact_string_12 %></h5>
         <%= simple_form_for @incoming_contact do |ic| %>
         <input type="hidden" name="to" value="username@domain.extension" />
         <div class="form-group mb-3 zform text-left">
@@ -65,9 +66,8 @@
         <% end %>
       </div>
     </div>
-    <%= link_to "Edit", edit_contact_path, class: "btn btn-outline-info btn-lg pull-right" %> 
+ 
   </div>
   <!-- end of .container-->
 </section>
-<% else %>
 <% end %>

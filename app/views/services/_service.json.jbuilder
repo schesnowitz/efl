@@ -1,0 +1,2 @@
+json.extract! service, :id, :string_1, :string_2, :string_3, :string_4, :string_5, :string_6, :string_7, :string_8, :string_9, :string_10, :string_11, :string_12, :string_13, :string_14, :string_15, :string_16, :string_17, :string_18, :string_19, :string_20, :string_21, :string_22, :string_23, :string_24, :string_25, :string_26, :string_27, :string_28, :string_29, :string_30, :created_at, :updated_at
+json.url service_url(service, format: :json)

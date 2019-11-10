@@ -1,0 +1,22 @@
+<% if @take_action.hide_take_action? %>
+<% else %>
+<section class="py-5 text-center bg-black text-white" data-zanim-timeline="{}" data-zanim-trigger="scroll" id="drive">
+  <div class="container">
+    <div class="overflow-hidden">
+      <h4 class="font-weight-normal text-white mb-1" data-zanim-xs='{"duration":1.5,"delay":0}'><%= @take_action.take_action_string_1 %><br class="d-block d-sm-none" /> <%= @take_action.take_action_string_2 %></h4>
+    </div>
+    <div class="overflow-hidden">
+      <p data-zanim-xs='{"duration":1.5,"delay":0.1}'><%= @take_action.take_action_string_3 %></p>
+    </div>
+    <div data-zanim-xs='{"from":{"opacity":0,"y":30},"to":{"opacity":1,"y":0},"duration":1.5,"delay":0.5}'>
+    <%= link_to new_driver_application_path do %>
+    <span class="btn btn-outline-light btn-sm hvr-sweep-top mt-2" href="../pages/work-alt.html"><%= @take_action.take_action_string_4 %></span>
+    <% end %>
+    </div>
+
+
+  </div>
+  <!-- end of .container-->
+</section>
+
+<% end %>

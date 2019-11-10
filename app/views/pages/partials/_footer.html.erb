@@ -1,17 +1,17 @@
- <section class="text-center bg-black py-3">
-
-      <div class="container">
-        <div class="row justify-content-between">
-          <div class="col-12 col-md-auto mb-1 mb-md-0">
-            <p class="mb-0"><%= @page.foot_text1 %> &copy; Copyright <%= Time.now.strftime("%Y")%><span class="mx-2">|</span><span class="text-900 hover-color-white">
-                <%= @page.foot_text2 %></span></p>
-          </div>
-          <div class="col-12 col-md-auto">
-            <p class="mb-0"><%= @page.foot_text3 %><span class="fa fa-heart mx-2"></span><%= @page.foot_text4 %> <a class="text-800 hover-color-white" href="#!"><%= @page.foot_text5 %></a></p>
-          </div>
-        </div>
-          <%= link_to "Edit", edit_footer_path, class: "btn btn-outline-info btn-lg pull-right" %> 
+<% if @footer.hide_footer? %>
+<% else %>
+<section class="text-center bg-black py-3">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-12 col-md-auto mb-1 mb-md-0">
+        <p class="mb-0"><%= @footer.footer_string_1 %> &copy; Copyright <%= Time.now.strftime("%Y")%><span class="mx-2">|</span><span class="text-900 hover-color-white">
+          <%= @footer.footer_string_2 %></span>
+        </p>
       </div>
-
-      
-          </section> 
+      <div class="col-12 col-md-auto">
+        <p class="mb-0"><%= @footer.footer_string_3 %><span class="fa <%= @footer.footer_font_awesome %> mx-2"></span><%= @footer.footer_string_4 %> <a class="text-800 hover-color-white" href="#!"><%= @footer.footer_string_5 %></a></p>
+      </div>
+    </div>
+  </div>
+</section>
+<% end %>

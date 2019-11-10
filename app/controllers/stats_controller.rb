@@ -69,6 +69,6 @@ class StatsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def stat_params
-      params.require(:stat).permit(:string_1, :string_2, :string_3, :string_4, :string_5, :string_num_1, :string_num_2, :string_num_3)
+      params.require(:stat).permit(:hide_stat, :stat_string_1, :stat_string_2, :stat_string_3, :stat_string_4, :stat_string_5, :stat_string_num_1, :stat_string_num_2, :stat_string_num_3, :stat_svg_1, :stat_svg_2, :stat_svg_3)
     end
 end

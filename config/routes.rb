@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  resources :app_settings
+  resources :take_actions
+  resources :contacts
+  resources :footers
+  resources :headers
+  resources :performances
+  resources :services
+  resources :abouts
   resources :stats, except: :destroy
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users

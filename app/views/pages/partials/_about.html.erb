@@ -1,14 +1,16 @@
-<% if @page.show_about? %>
+
+<% if @about.hide_about? %>
+<% else %>
 <section class="pt-3 pt-lg-5 pb-6 pb-lg-8 text-center" id="about">
   <div class="container">
     <div class="row mb-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
       <div class="col">
         <div class="overflow-hidden">
-          <h2 class="fs-sm-5 mb-2" data-zanim-xs='{"duration":1.5,"delay":0}'><%= @page.about_text1 %></h2>
+          <h2 class="fs-sm-5 mb-2" data-zanim-xs='{"duration":1.5,"delay":0}'><%= @about.about_string_1 %></h2>
         </div>
         <div class="overflow-hidden">
           <p class="text-uppercase fs--1 text-black ls-0 mb-0" data-zanim-xs='{"duration":1.5,"delay":0.1}'>
-            <%= @page.about_text2 %>
+            <%= @about.about_string_2 %>
           </p>
         </div>
         <div class="overflow-hidden">
@@ -18,20 +20,19 @@
     </div>
     <div class="row align-items-center">
       <div class="col-md-4 text-md-right">
-        <h5 class="ls-1 mb-3"><%= @page.about_text3 %></h5>
-        <p class="mb-0"><%= @page.about_text4 %><br class="d-none d-xl-block" /> <%= @page.about_text5 %><br class="d-none d-xl-block" /><%= @page.about_text6 %><br class="d-none d-xl-block" /> <%= @page.about_text7 %><br class="d-none d-sm-block" /> <%= @page.about_text8 %></p>
+        <h5 class="ls-1 mb-3"><%= @about.about_string_3 %></h5>
+        <p class="mb-0"><%= @about.about_string_4 %><br class="d-none d-xl-block" /> <%= @about.about_string_5 %><br class="d-none d-xl-block" /><%= @about.about_string_6 %><br class="d-none d-xl-block" /> <%= @about.about_string_7 %><br class="d-none d-sm-block" /> <%= @about.about_string_8 %></p>
       </div>
      <div class="col-md-4 px-lg-4 my-4 my-md-0">
-    <%= image_tag(@page.about_image_resized, class: "rounded w-100 w-sm-75 w-md-100" ) if @page.about_image.attached? %>
+    <%= image_tag(@about.about_image_variant, class: "rounded w-100 w-sm-75 w-md-100" ) if @about.about_image.attached? %>
   </div>
       <div class="col-md-4 text-md-left">
-        <h5 class="ls-1 mb-3"><%= @page.about_text9 %></h5>
-        <p class="mb-0"><%= @page.about_text10 %><br class="d-none d-xl-block" /> <%= @page.about_text11 %><br class="d-none d-xl-block" /> <%= @page.about_text12 %><br class="d-none d-xl-block" /> <%= @page.about_text13 %><br class="d-none d-xl-block" /> <%= @page.about_text14 %></p>
+        <h5 class="ls-1 mb-3"><%= @about.about_string_9 %></h5>
+        <p class="mb-0"><%= @about.about_string_10 %><br class="d-none d-xl-block" /> <%= @about.about_string_11 %><br class="d-none d-xl-block" /> <%= @about.about_string_12 %><br class="d-none d-xl-block" /> <%= @about.about_string_13 %><br class="d-none d-xl-block" /> <%= @about.about_string_14 %></p>
       </div>
     </div>
-        <%= link_to "Edit", edit_about_path, class: "btn btn-outline-info btn-lg pull-right" %> 
+
   </div>
   <!-- end of .container-->
 </section>
-<% else %>
 <% end %>

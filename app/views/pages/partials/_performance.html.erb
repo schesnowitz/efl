@@ -1,34 +1,36 @@
-<% if @page.show_performance? %>
+
+<% if @performance.hide_performance? %>
+<% else %>
 <section class="py-6" id="performance">
   <div class="bg-holder overlay overlay-1" style="background-image">
-    <%= image_tag(@page.eight_82) if @page.performance_image.attached? %>
+    <%= image_tag(@performance.performance_image_variant) if @performance.performance_image.attached? %>
   </div>
   <!--/.bg-holder-->
   <div class="container">
     <div class="row">
       <div class="col-12 mb-4 text-center" data-zanim-timeline="{}" data-zanim-trigger="scroll">
         <div class="overflow-hidden">
-          <h2 class="fs-md-5 text-white" data-zanim-xs='{"duration":"1.5","delay":0}'><%= @page.performance_text1 %></h2>
+          <h2 class="fs-md-5 text-white" data-zanim-xs='{"duration":"1.5","delay":0}'><%= @performance.performance_string_1 %></h2>
         </div>
         <div class="overflow-hidden">
-          <p class="fs--1 text-uppercase text-white ls-0 mb-0" data-zanim-xs='{"duration":"1.5","delay":0.1}'><%= @page.performance_text2 %></p>
+          <p class="fs--1 text-uppercase text-white ls-0 mb-0" data-zanim-xs='{"duration":"1.5","delay":0.1}'><%= @performance.performance_string_2 %></p>
         </div>
         <div class="overflow-hidden">
           <hr class="hr-short border-white" data-zanim-xs='{"duration":"1.5","delay":0.2}' />
         </div>
       </div>
       <div class="col-lg-6 px-4 px-sm-3 px-lg-5 mb-4 mb-md-5 mb-lg-0" style="padding-top: 28px;">
-        <div class="progress-line" data-options='{"progress":<%= @page.performance_num1 %>,"text":"<%= @page.performance_text3 %>","css":{"color":"#fff","trailColor":"#555","textColor":"#fff"}}'></div>
-        <div class="progress-line" data-options='{"progress":<%= @page.performance_num2 %>,"text":"<%= @page.performance_text4 %>","css":{"color":"#fff","trailColor":"#555","textColor":"#fff"}}'></div>
-        <div class="progress-line" data-options='{"progress":<%= @page.performance_num3 %>,"text":"<%= @page.performance_text5 %>","css":{"color":"#fff","trailColor":"#555","textColor":"#fff"}}'></div>
-        <div class="progress-line" data-options='{"progress":<%= @page.performance_num4 %>,"text":"<%= @page.performance_text6 %>","css":{"color":"#fff","trailColor":"#555","textColor":"#fff"}}'></div>
+        <div class="progress-line" data-options='{"progress":<%= @performance.performance_integer_1 %>,"text":"<%= @performance.performance_string_3 %>","css":{"color":"#fff","trailColor":"#555","textColor":"#fff"}}'></div>
+        <div class="progress-line" data-options='{"progress":<%= @performance.performance_integer_2 %>,"text":"<%= @performance.performance_string_4 %>","css":{"color":"#fff","trailColor":"#555","textColor":"#fff"}}'></div>
+        <div class="progress-line" data-options='{"progress":<%= @performance.performance_integer_3 %>,"text":"<%= @performance.performance_string_5 %>","css":{"color":"#fff","trailColor":"#555","textColor":"#fff"}}'></div>
+        <div class="progress-line" data-options='{"progress":<%= @performance .performance_integer_4 %>,"text":"<%= @performance.performance_string_6 %>","css":{"color":"#fff","trailColor":"#555","textColor":"#fff"}}'></div>
       </div>
       <div class="col-lg-6 px-lg-5 d-flex flex-column justify-content-between">
         <div class="fancy-tab">
           <div class="nav-bar nav-bar-border justify-content-center justify-content-lg-start">
-            <div class="nav-bar-item active text-uppercase text-white"><%= @page.performance_text7 %></div>
-            <div class="nav-bar-item text-uppercase text-white"><%= @page.performance_text8 %></div>
-            <div class="nav-bar-item text-uppercase text-white"><%= @page.performance_text9 %></div>
+            <div class="nav-bar-item active text-uppercase text-white"><%= @performance.performance_string_7 %></div>
+            <div class="nav-bar-item text-uppercase text-white"><%= @performance.performance_string_8 %></div>
+            <div class="nav-bar-item text-uppercase text-white"><%= @performance.performance_string_9 %></div>
             <div class="tab-indicator-trail"></div>
           </div>
           <div class="tab-contents text-white mt-4">
@@ -36,7 +38,7 @@
               <div class="media align-items-center">
                 <img src="../assets/img/line-icons/diamond.svg" width="56" alt="" />
                 <div class="media-body pl-3">
-                  <p class="mb-0"><%= @page.performance_text10 %></p>
+                  <p class="mb-0"><%= @performance.performance_string_10 %></p>
                 </div>
               </div>
             </div>
@@ -44,7 +46,7 @@
               <div class="media align-items-center">
                 <img src="../assets/img/line-icons/customer-service.svg" width="56" alt="" />
                 <div class="media-body pl-3">
-                  <p class="mb-0"><%= @page.performance_text11 %></p>
+                  <p class="mb-0"><%= @performance.performance_string_11 %></p>
                 </div>
               </div>
             </div>
@@ -52,18 +54,16 @@
               <div class="media align-items-center">
                 <img src="../assets/img/line-icons/monitor-3.svg" width="56" alt="" />
                 <div class="media-body pl-3">
-                  <p class="mb-0"><%= @page.performance_text12 %></p>
+                  <p class="mb-0"><%= @performance.performance_string_12 %></p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="text-center text-lg-left"><span class="btn btn-outline-light hvr-sweep-top btn-sm mt-5 mt-lg-4 mb-2" ><%= @page.performance_text14 %></span></div>
+        <div class="text-center text-lg-left"><span class="btn btn-outline-light hvr-sweep-top btn-sm mt-5 mt-lg-4 mb-2" ><%= @performance.performance_string_14 %></span></div>
       </div>
     </div>
-      <%= link_to "Edit", edit_performance_path, class: "btn btn-outline-info btn-lg pull-right" %> 
   </div>
   <!-- end of .container-->
 </section>
-<% else %>
 <% end %>

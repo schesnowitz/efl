@@ -1,0 +1,31 @@
+
+<%= simple_form_for(@performance) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :string_1 %>
+    <%= f.input :string_2 %>
+    <%= f.input :string_3 %>
+    <%= f.input :string_4 %>
+    <%= f.input :string_5 %>
+    <%= f.input :string_6 %>
+    <%= f.input :string_7 %>
+    <%= f.input :string_8 %>
+    <%= f.input :string_9 %>
+    <%= f.input :string_10 %>
+    <%= f.input :string_11 %>
+    <%= f.input :string_12 %>
+    <%= f.input :string_13 %>
+    <%= f.input :string_14 %>
+    <%= f.input :string_15 %>
+    <%= f.input :integer_1 %>
+    <%= f.input :integer_2 %>
+    <%= f.input :integer_3 %>
+    <%= f.input :integer_4 %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

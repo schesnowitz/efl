@@ -1,0 +1,85 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Services</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>String 1</th>
+      <th>String 2</th>
+      <th>String 3</th>
+      <th>String 4</th>
+      <th>String 5</th>
+      <th>String 6</th>
+      <th>String 7</th>
+      <th>String 8</th>
+      <th>String 9</th>
+      <th>String 10</th>
+      <th>String 11</th>
+      <th>String 12</th>
+      <th>String 13</th>
+      <th>String 14</th>
+      <th>String 15</th>
+      <th>String 16</th>
+      <th>String 17</th>
+      <th>String 18</th>
+      <th>String 19</th>
+      <th>String 20</th>
+      <th>String 21</th>
+      <th>String 22</th>
+      <th>String 23</th>
+      <th>String 24</th>
+      <th>String 25</th>
+      <th>String 26</th>
+      <th>String 27</th>
+      <th>String 28</th>
+      <th>String 29</th>
+      <th>String 30</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @services.each do |service| %>
+      <tr>
+        <td><%= service.string_1 %></td>
+        <td><%= service.string_2 %></td>
+        <td><%= service.string_3 %></td>
+        <td><%= service.string_4 %></td>
+        <td><%= service.string_5 %></td>
+        <td><%= service.string_6 %></td>
+        <td><%= service.string_7 %></td>
+        <td><%= service.string_8 %></td>
+        <td><%= service.string_9 %></td>
+        <td><%= service.string_10 %></td>
+        <td><%= service.string_11 %></td>
+        <td><%= service.string_12 %></td>
+        <td><%= service.string_13 %></td>
+        <td><%= service.string_14 %></td>
+        <td><%= service.string_15 %></td>
+        <td><%= service.string_16 %></td>
+        <td><%= service.string_17 %></td>
+        <td><%= service.string_18 %></td>
+        <td><%= service.string_19 %></td>
+        <td><%= service.string_20 %></td>
+        <td><%= service.string_21 %></td>
+        <td><%= service.string_22 %></td>
+        <td><%= service.string_23 %></td>
+        <td><%= service.string_24 %></td>
+        <td><%= service.string_25 %></td>
+        <td><%= service.string_26 %></td>
+        <td><%= service.string_27 %></td>
+        <td><%= service.string_28 %></td>
+        <td><%= service.string_29 %></td>
+        <td><%= service.string_30 %></td>
+        <td><%= link_to 'Show', service %></td>
+        <td><%= link_to 'Edit', edit_service_path(service) %></td>
+        <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Service', new_service_path %>

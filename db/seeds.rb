@@ -4,16 +4,115 @@ require 'faker'
 
 stat = Stat.find_or_initialize_by(id: 1)
 
-  stat.string_1 = Faker::Company.industry
-  stat.string_2 = Faker::Company.industry
-  stat.string_3 = Faker::Company.industry
-  stat.string_4 = Faker::Company.industry
-  stat.string_5 = Faker::Company.industry
-  stat.string_num_1 = 321321
-  stat.string_num_2 = 54645484
-  stat.string_num_3 = 89874
+  stat.stat_string_1 = Faker::Company.industry
+  stat.stat_string_2 = Faker::Company.industry
+  stat.stat_string_3 = Faker::Company.industry
+  stat.stat_string_4 = Faker::Company.industry
+  stat.stat_string_5 = Faker::Company.industry
+  stat.stat_string_num_1 = 321321
+  stat.stat_string_num_2 = 54645484
+  stat.stat_string_num_3 = 89874
 stat.save!
 puts stat.inspect
+
+about = About.find_or_initialize_by(id: 1)
+
+  about.about_string_1 = Faker::Company.bs
+  about.about_string_2 = Faker::Company.bs
+  about.about_string_3 = Faker::Company.bs
+  about.about_string_4 = Faker::Company.bs
+  about.about_string_5 = Faker::Company.bs
+  about.about_string_6 = Faker::Company.bs
+  about.about_string_7 = Faker::Company.bs
+  about.about_string_8 = Faker::Company.bs
+  about.about_string_9 = Faker::Company.bs
+  about.about_string_10 = Faker::Company.bs
+  about.about_string_11 = Faker::Company.bs
+  about.about_string_12 = Faker::Company.bs
+  about.about_string_13 = Faker::Company.bs
+  about.about_string_14 = Faker::Company.bs
+
+
+about.save!
+puts about.inspect
+
+service = Service.find_or_initialize_by(id: 1)
+
+  service.service_string_1 = Faker::Company.industry
+  service.service_string_2 = Faker::Company.industry
+  service.service_string_3 = Faker::Company.industry
+  service.service_string_4 = Faker::Company.industry
+  service.service_string_5 = Faker::Company.industry
+
+service.save!
+puts service.inspect
+
+footer = Footer.find_or_initialize_by(id: 1)
+
+  footer.footer_string_1 = Faker::Company.industry
+  footer.footer_string_2 = Faker::Company.industry
+  footer.footer_string_3 = Faker::Company.industry
+  footer.footer_string_4 = Faker::Company.industry
+  footer.footer_string_5 = Faker::Company.industry
+
+footer.save!
+puts footer.inspect
+
+header = Header.find_or_initialize_by(id: 1)
+
+  header.header_string_1 = Faker::Company.industry
+  header.header_string_2 = Faker::Company.industry
+  header.header_string_3 = Faker::Company.industry
+  header.header_string_4 = Faker::Company.industry
+
+
+header.save!
+puts header.inspect
+
+contact = Contact.find_or_initialize_by(id: 1)
+
+  contact.contact_string_1 = Faker::Company.industry
+  contact.contact_string_2 = Faker::Company.industry
+  contact.contact_string_3 = Faker::Company.industry
+  contact.contact_string_4 = Faker::Company.industry
+  contact.contact_string_5 = Faker::Company.industry
+
+contact.save!
+puts contact.inspect
+
+performance = Performance.find_or_initialize_by(id: 1)
+
+  performance.performance_string_1 = Faker::Company.industry
+  performance.performance_string_2 = Faker::Company.industry
+  performance.performance_string_3 = Faker::Company.industry
+  performance.performance_string_4 = Faker::Company.industry
+  performance.performance_string_5 = Faker::Company.industry
+  performance.performance_integer_1 = 71
+  performance.performance_integer_2 = 23
+  performance.performance_integer_3 = 63
+  performance.performance_integer_4 = 88
+performance.save!
+puts performance.inspect
+
+ta = TakeAction.find_or_initialize_by(id: 1)
+
+  ta.take_action_string_1 = Faker::Company.industry
+  ta.take_action_string_2 = Faker::Company.industry
+  ta.take_action_string_3 = Faker::Company.industry
+  ta.take_action_string_4 = Faker::Company.industry
+ta.save!
+puts ta.inspect
+
+# setting = Setting.find_or_initialize_by(id: 1)
+
+#   setting.string_1 = Faker::Company.industry
+#   setting.string_2 = Faker::Company.industry
+#   setting.string_3 = Faker::Company.industry
+#   setting.string_4 = Faker::Company.industry
+
+
+# setting.save!
+# puts setting.inspect
 
 page = Page.find_or_initialize_by(id: 1)
 

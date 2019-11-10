@@ -1,0 +1,63 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Performances</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>String 1</th>
+      <th>String 2</th>
+      <th>String 3</th>
+      <th>String 4</th>
+      <th>String 5</th>
+      <th>String 6</th>
+      <th>String 7</th>
+      <th>String 8</th>
+      <th>String 9</th>
+      <th>String 10</th>
+      <th>String 11</th>
+      <th>String 12</th>
+      <th>String 13</th>
+      <th>String 14</th>
+      <th>String 15</th>
+      <th>Integer 1</th>
+      <th>Integer 2</th>
+      <th>Integer 3</th>
+      <th>Integer 4</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @performances.each do |performance| %>
+      <tr>
+        <td><%= performance.string_1 %></td>
+        <td><%= performance.string_2 %></td>
+        <td><%= performance.string_3 %></td>
+        <td><%= performance.string_4 %></td>
+        <td><%= performance.string_5 %></td>
+        <td><%= performance.string_6 %></td>
+        <td><%= performance.string_7 %></td>
+        <td><%= performance.string_8 %></td>
+        <td><%= performance.string_9 %></td>
+        <td><%= performance.string_10 %></td>
+        <td><%= performance.string_11 %></td>
+        <td><%= performance.string_12 %></td>
+        <td><%= performance.string_13 %></td>
+        <td><%= performance.string_14 %></td>
+        <td><%= performance.string_15 %></td>
+        <td><%= performance.integer_1 %></td>
+        <td><%= performance.integer_2 %></td>
+        <td><%= performance.integer_3 %></td>
+        <td><%= performance.integer_4 %></td>
+        <td><%= link_to 'Show', performance %></td>
+        <td><%= link_to 'Edit', edit_performance_path(performance) %></td>
+        <td><%= link_to 'Destroy', performance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Performance', new_performance_path %>

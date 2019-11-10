@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Mailer send to email1:</strong>
+  <%= @app_setting.mailer_send_to_email1 %>
+</p>
+
+<p>
+  <strong>Mailer send to email2:</strong>
+  <%= @app_setting.mailer_send_to_email2 %>
+</p>
+
+<p>
+  <strong>String 1:</strong>
+  <%= @app_setting.string_1 %>
+</p>
+
+<p>
+  <strong>String 2:</strong>
+  <%= @app_setting.string_2 %>
+</p>
+
+<p>
+  <strong>String 3:</strong>
+  <%= @app_setting.string_3 %>
+</p>
+
+<p>
+  <strong>String 4:</strong>
+  <%= @app_setting.string_4 %>
+</p>
+
+<p>
+  <strong>String 5:</strong>
+  <%= @app_setting.string_5 %>
+</p>
+
+<p>
+  <strong>Boolian 1:</strong>
+  <%= @app_setting.boolian_1 %>
+</p>
+
+<%= link_to 'Edit', edit_app_setting_path(@app_setting) %> |
+<%= link_to 'Back', app_settings_path %>

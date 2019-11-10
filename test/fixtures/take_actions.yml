@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hide_take_action: false
+  take_action_string_1: MyString
+
+two:
+  hide_take_action: false
+  take_action_string_1: MyString
