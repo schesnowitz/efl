@@ -1,12 +1,16 @@
 RailsAdmin.config do |config|
 
   ### Popular gems integration
-
+  config.main_app_name = ["Eagle Freight", "BackOffice"]
   ## == Devise ==
-  # config.authenticate_with do
-  #   warden.authenticate! scope: :user
-  # end
-  # config.current_user_method(&:current_user)
+  config.authenticate_with do
+    warden.authenticate! scope: :user
+  end
+
+    config.authorize_with do
+      redirect_to main_app.root_path unless current_user.admin?
+    end
+
 
   ## == CancanCan ==
   # config.authorize_with :cancancan

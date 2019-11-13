@@ -1,16 +1,22 @@
 class DriverApplicationsController < ApplicationController
   before_action :set_driver_application, only: [:show, :edit, :update, :destroy]
   before_action :set_page, only: [:new, :show, :index, :create]
+  before_action :set_footer, only: [:new, :show, :index, :create]
+
   # before_action :authenticate_user!, except: [:new, :create] 
   # GET /driver_applications
   # GET /driver_applications.json
   def index
+    redirect_back(fallback_location: root_path)
+    flash[:danger] = "Whoa! why did you try to do that?"
     @driver_applications = DriverApplication.all
   end
 
   # GET /driver_applications/1
   # GET /driver_applications/1.json
   def show
+    redirect_back(fallback_location: root_path)
+    flash[:danger] = "Whoa! why did you try to do that?"
   end
 
   # GET /driver_applications/new
@@ -20,6 +26,8 @@ class DriverApplicationsController < ApplicationController
 
   # GET /driver_applications/1/edit
   def edit
+    redirect_back(fallback_location: root_path)
+    flash[:danger] = "Whoa! why did you try to do that?"
   end
 
   # POST /driver_applications
@@ -30,7 +38,7 @@ class DriverApplicationsController < ApplicationController
     respond_to do |format|
       if @driver_application.save
         DriverApplicationMailer.driver_application(@driver_application).deliver_now
-        format.html { redirect_to root_path, notice: 'Driver application was successfully sent, we will be in touch soon.' }
+        format.html { redirect_to root_path, notice: 'Your application was successfully sent, we will be in touch soon.' }
         format.json { render :show, status: :created, location: @driver_application }
       else
         format.html { render :new }
@@ -71,6 +79,14 @@ class DriverApplicationsController < ApplicationController
 
     def set_page
       @page = Page.find(1)
+    end
+
+    def set_footer
+      @footer = Footer.find(1)
+    end
+
+    def set_app_setting
+      @app_setting = AppSetting.find(1)
     end
     # Never trust parameters from the scary internet, only allow the white list through.
     def driver_application_params

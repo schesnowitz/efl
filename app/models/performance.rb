@@ -13,6 +13,10 @@ class Performance < ApplicationRecord
 
 
   rails_admin do
+    configure :hide_performance do
+      label 'Hide page performance: '
+      help "When selected, the performance partial will be hidden from the view. "
+    end
     configure :performance_integer_1 do
       label 'Integer Input 1: '
       help " Must be greater than or equal to => 0, less than or equal to => 100"

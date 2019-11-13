@@ -69,6 +69,6 @@ class AppSettingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def app_setting_params
-      params.require(:app_setting).permit(:mailer_send_to_email1, :mailer_send_to_email2, :string_1, :string_2, :string_3, :string_4, :string_5, :boolian_1)
+      params.require(:app_setting).permit(:mailer_send_to_email1, :mailer_send_to_email2, :string_1, :string_2, :string_3, :string_4, :string_5, :boolean_1, :boolean_2, :hide_logo_text, :hide_logo_image)
     end
 end

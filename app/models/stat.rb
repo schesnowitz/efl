@@ -15,7 +15,11 @@ class Stat < ApplicationRecord
   end
 
   # validates_presence_of :string_1
-  rails_admin do
+  rails_admin do   
+    configure :hide_statt do
+      label 'Hide page stat: '
+      help "When selected, the stat partial will be hidden from the view. "
+    end
     configure :stat_string_num_1 do
       label 'Number Input 1: '
       help " Must be greater than or equal to => 0, less than or equal to => 9999999999"

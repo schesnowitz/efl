@@ -28,8 +28,9 @@ class IncomingContactsController < ApplicationController
 
     respond_to do |format|
       if @incoming_contact.save
-        format.html { IncomingContactMailer.incoming_contact(@incoming_contact).deliver_now
         flash[:success] = "Your message has been sent."
+        format.html { IncomingContactMailer.incoming_contact(@incoming_contact).deliver_later 
+        
         redirect_to root_path}
         format.json { render :show, status: :created, location: @incoming_contact }
       else

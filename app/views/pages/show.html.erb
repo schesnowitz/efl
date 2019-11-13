@@ -2,9 +2,11 @@
 
 
 <main>  
+  <%= render "pages/partials/navi" %>
   <%= render "pages/partials/header" %>
   <%= render "pages/partials/about" %>
   <%= render "pages/partials/stats" %>
+    <%= render "pages/partials/services" %>
   <%= render "pages/partials/performance" %> 
   <%= render "pages/partials/take_action" %> 
   <%= render "pages/partials/contact" %> 
@@ -13,8 +15,3 @@
 
   <%= render "pages/partials/totop" %>
   <%= render "pages/partials/footer" %> 
-<script>
-  if (window.location.href.indexOf('reload')==-1) {
-       window.location.replace(window.location.href+'?reload');
-  }
-</script>

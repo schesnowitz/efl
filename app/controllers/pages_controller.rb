@@ -103,19 +103,23 @@ class PagesController < ApplicationController
     end
 
     def set_footer
-      @footer= Footer.find(1)
+      @footer = Footer.find(1)
     end
 
     def set_performance
-      @performance= Performance.find(1)
+      @performance = Performance.find(1)
     end
 
     def set_service
-      @service= Service.find(1)
+      @service = Service.find(1)
     end
 
     def set_take_action
-      @take_action= TakeAction.find(1)
+      @take_action = TakeAction.find(1)
+    end
+
+    def set_app_setting
+      @app_setting = AppSetting.find(1)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

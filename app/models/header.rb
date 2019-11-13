@@ -11,6 +11,12 @@ class Header < ApplicationRecord
   end
 
   rails_admin do
+
+    configure :hide_header do
+      label 'Hide page header: '
+      help "When selected, the header partial will be hidden from the view. "
+    end
+
     configure :header_string_1 do
       label 'Text Input 1: '
       help " "

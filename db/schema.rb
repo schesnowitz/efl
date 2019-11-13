@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_10_030707) do
+ActiveRecord::Schema.define(version: 2019_11_10_072712) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,22 @@ ActiveRecord::Schema.define(version: 2019_11_10_030707) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "app_settings", force: :cascade do |t|
+    t.boolean "boolean_1", default: false
+    t.boolean "boolean_2", default: false
+    t.boolean "hide_logo_text", default: false
+    t.boolean "hide_logo_image", default: false
+    t.string "mailer_send_to_email1"
+    t.string "mailer_send_to_email2"
+    t.string "string_1"
+    t.string "string_2"
+    t.string "string_3"
+    t.string "string_4"
+    t.string "string_5"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "contacts", force: :cascade do |t|
@@ -115,7 +131,7 @@ ActiveRecord::Schema.define(version: 2019_11_10_030707) do
   end
 
   create_table "headers", force: :cascade do |t|
-    t.string "hide_header", default: "f"
+    t.boolean "hide_header", default: false
     t.string "header_string_1"
     t.string "header_string_2"
     t.string "header_string_3"
@@ -133,77 +149,6 @@ ActiveRecord::Schema.define(version: 2019_11_10_030707) do
   end
 
   create_table "pages", force: :cascade do |t|
-    t.string "mailer_send_to_email1"
-    t.string "mailer_send_to_email2"
-    t.string "name"
-    t.string "count_text1"
-    t.string "count_text2"
-    t.string "count_text3"
-    t.string "count_text4"
-    t.string "count_text5"
-    t.string "count_text6"
-    t.string "count_num1"
-    t.string "count_num2"
-    t.string "count_num3"
-    t.string "performance_text1"
-    t.string "performance_text2"
-    t.string "performance_text3"
-    t.string "performance_text4"
-    t.string "performance_text5"
-    t.string "performance_text6"
-    t.string "performance_text7"
-    t.string "performance_text8"
-    t.string "performance_text9"
-    t.string "performance_text10"
-    t.string "performance_text11"
-    t.string "performance_text12"
-    t.string "performance_text13"
-    t.string "performance_text14"
-    t.string "performance_text15"
-    t.integer "performance_num1"
-    t.integer "performance_num2"
-    t.integer "performance_num3"
-    t.integer "performance_num4"
-    t.string "top_text1"
-    t.string "top_text2"
-    t.string "top_text3"
-    t.string "top_text4"
-    t.string "foot_text1"
-    t.string "foot_text2"
-    t.string "foot_text3"
-    t.string "foot_text4"
-    t.string "foot_text5"
-    t.string "contact_text1"
-    t.string "contact_text2"
-    t.string "contact_text3"
-    t.string "contact_text4"
-    t.string "contact_text5"
-    t.string "contact_text6"
-    t.string "contact_text7"
-    t.string "contact_text8"
-    t.string "contact_text9"
-    t.string "contact_text10"
-    t.string "contact_text11"
-    t.string "contact_text12"
-    t.string "contact_text13"
-    t.string "contact_text14"
-    t.string "contact_text15"
-    t.string "start_text1"
-    t.string "start_text2"
-    t.string "start_text3"
-    t.string "start_button_text"
-    t.boolean "show_home"
-    t.boolean "show_about"
-    t.boolean "show_stats"
-    t.boolean "show_services"
-    t.boolean "show_performance"
-    t.boolean "show_get_started"
-    t.boolean "show_contact"
-    t.boolean "show_logo_image"
-    t.boolean "show_logo_text"
-    t.string "logo_text1"
-    t.string "logo_text2"
-    t.string "logo_text3"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,65 +1,47 @@
- 
- 
- <nav class="navbar navbar-expand-lg navbar-dark navbar-theme fixed-top py-0">
-      <div class="container">
-      <a class="navbar-brand font-weight-normal ls-1" href="../index.html">
-      
-<% if @page.show_logo_image? %>
-          <%= image_tag(@page.logo_nail) if @page.logo_image.attached? %>
-    <% else %>  
+<nav class="navbar navbar-expand-lg navbar-dark navbar-theme fixed-top py-0">
+  <div class="container">
+    <a class="navbar-brand font-weight-normal ls-1" href="../index.html">
+    <% if @app_setting.hide_logo_image? %>
+    <% else %>
+    <%= image_tag(@app_setting.logo_image_variant) if @app_setting.logo_image.attached? %>
     <% end %>   
-       <% if @page.show_logo_text? %>
-          <%= @page.logo_text1 %><span class="navbar-brand-i"><%= @page.logo_text2 %></span><%= @page.logo_text3 %>
-         <% else %>  
+    <% if @app_setting.hide_logo_text? %>
+    <% else %>
+    <%= @app_setting.string_1 %><span class="navbar-brand-i"><%= @app_setting.string_2 %></span><%= @app_setting.string_3 %>
     <% end %>
-      </a>
-        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto" id="navbar-one-page">
-           <% if @page.show_about? %>
-            <li class="nav-item"><a class="nav-link" href="#about" data-fancyscroll="data-fancyscroll" data-offset="64"> <span class="nav-link-text">About</span></a></li>
-                  <% else %>  
-    <% end %>
-            <% if @page.show_stats? %>
-            <li class="nav-item"><a class="nav-link" href="#stats" data-fancyscroll="data-fancyscroll" data-offset="64"> <span class="nav-link-text">Stats</span></a></li>
-                 <% else %>  
-    <% end %> 
-    <% if @page.show_services? %>
-            <li class="nav-item"><a class="nav-link" href="#services" data-fancyscroll="data-fancyscroll" data-offset="64"> <span class="nav-link-text">Services</span></a></li>      
-                  <% else %>  
-    <% end %>
-    <% if @page.show_performance? %>
-            <li class="nav-item"><a class="nav-link" href="#performance" data-fancyscroll="data-fancyscroll" data-offset="64"> <span class="nav-link-text">Performance</span></a></li>
-      <% else %>  
-    <% end %>
-<% if @page.show_get_started? %>
-            <li class="nav-item"><a class="nav-link" href="#drive" data-fancyscroll="data-fancyscroll" data-offset="64"><span class="nav-link-text">Drive</span></a></li>
-      <% else %>  
-    <% end %>
-<% if @page.show_contact? %>
-            <li class="nav-item"><a class="nav-link" href="#contact" data-fancyscroll="data-fancyscroll" data-offset="64"><span class="nav-link-text">Contact</span></a></li>
-      <% else %>  
-    <% end %>
-
-            
-            <li class="nav-item"><span class="nav-link" data-fancyscroll="data-fancyscroll" data-offset="64"><span class="nav-link-text"><%= link_to(edit_settings_path) do %>Edit Settings<% end %></span></span></li>
-            
-    <% if current_user.try(:admin)  %>
-    
-            <li class="nav-item"><span class="nav-link" href="#drive" data-fancyscroll="data-fancyscroll" data-offset="64"><span class="nav-link-text"><%= link_to  destroy_user_session_path, method: :destroy do %>Sign Out<% end %></span></span></li>
-            
-            <% end %>
-          <% if !current_user.try(:admin)  %>
-     
-                  <li class="nav-item"><span class="nav-link" data-fancyscroll="data-fancyscroll" data-offset="64"><span class="nav-link-text"><%= link_to  new_user_session_path do %>Sign in<% end %></span></span></li>
-      
-      
-      <% end %>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-             
-
-          
+    </a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto" id="navbar-one-page">
+        <% if @about.hide_about? %>
+        <% else %>
+        <li class="nav-item"><a class="nav-link" href="#about" data-fancyscroll="data-fancyscroll" data-offset="64"> <span class="nav-link-text">About</span></a></li>
+        <% end %>
+        <% if @stat.hide_stat? %>
+        <% else %>
+        <li class="nav-item"><a class="nav-link" href="#stats" data-fancyscroll="data-fancyscroll" data-offset="64"> <span class="nav-link-text">Stats</span></a></li>
+        <% end %> 
+        <% if @service.hide_service? %>
+        <% else %>
+        <li class="nav-item"><a class="nav-link" href="#services" data-fancyscroll="data-fancyscroll" data-offset="64"> <span class="nav-link-text">Services</span></a></li>
+        <% end %>
+        <% if @performance.hide_performance? %>
+        <% else %>
+        <li class="nav-item"><a class="nav-link" href="#performance" data-fancyscroll="data-fancyscroll" data-offset="64"> <span class="nav-link-text">Performance</span></a></li>
+        <% end %>
+        <% if @take_action.hide_take_action? %>
+        <% else %>
+        <li class="nav-item"><a class="nav-link" href="#drive" data-fancyscroll="data-fancyscroll" data-offset="64"><span class="nav-link-text">Drive</span></a></li>
+        <% end %>
+        <% if @contact.hide_contact? %>
+        <% else %>
+        <li class="nav-item"><a class="nav-link" href="#contact" data-fancyscroll="data-fancyscroll" data-offset="64"><span class="nav-link-text">Contact</span></a></li>
+        <% end %>
+        <% if current_user %>
+        <li class="nav-item"><span class="nav-link" href="#contact" data-fancyscroll="data-fancyscroll" data-offset="64"><span class="nav-link-text"><%= link_to('Logout', destroy_user_session_path, method: :delete) %></span></span></li>
+        <% else %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -7,10 +7,10 @@ class IncomingContactMailer < ApplicationMailer
   #
   def incoming_contact(incoming_contact)
     @incoming_contact = incoming_contact
-    @page = Page.find(1)
+    @app_setting = AppSetting.find(1)
     
 
-    mail to: "#{@page.mailer_send_to_email1}", subject: "New Incoming Contact"
+    mail to: "#{@app_setting.mailer_send_to_email1}", subject: "New Incoming Contact"
   end
 end
 
